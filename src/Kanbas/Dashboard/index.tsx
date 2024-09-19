@@ -11,11 +11,7 @@ export default function Dashboard() {
             className='wd-dashboard-course-link'
             to='/Kanbas/Courses/5610/Home'
           >
-            <img
-              src='src/assets/images/Northeastern_Wordmark.webp'
-              width={200}
-              alt=''
-            />
+            <img src='/images/Northeastern_Wordmark.webp' width={200} alt='' />
             <div>
               <h5>CS5610</h5>
               <p className='wd-dashboard-course-title'>
@@ -25,17 +21,15 @@ export default function Dashboard() {
             </div>
           </Link>
         </div>
+        <br />
+        <br />
         {/* course 2 */}
         <div className='wd-dashboard-course'>
           <Link
             className='wd-dashboard-course-link'
             to='/Kanbas/Courses/5600/Home'
           >
-            <img
-              src='src/assets/images/Northeastern_Wordmark.webp'
-              width={200}
-              alt=''
-            />
+            <img src='/images/Northeastern_Wordmark.webp' width={200} alt='' />
             <div>
               <h5>CS 5600</h5>
               <p className='wd-dashboard-course-title'>Operating Systems</p>
@@ -43,6 +37,8 @@ export default function Dashboard() {
             </div>
           </Link>
         </div>
+        <br />
+        <br />
         {/* course 3 */}
         <div className='wd-dashboard-course'>
           {" "}
@@ -50,11 +46,7 @@ export default function Dashboard() {
             className='wd-dashboard-course-link'
             to='/Kanbas/Courses/5010/Home'
           >
-            <img
-              src='src/assets/images/Northeastern_Wordmark.webp'
-              width={200}
-              alt=''
-            />
+            <img src='/images/Northeastern_Wordmark.webp' width={200} alt='' />
             <div>
               <h5>CS5010</h5>
               <p className='wd-dashboard-course-title'>
@@ -64,6 +56,8 @@ export default function Dashboard() {
             </div>
           </Link>{" "}
         </div>
+        <br />
+        <br />
         {/* course 4 */}
         <div className='wd-dashboard-course'>
           {" "}
@@ -71,11 +65,7 @@ export default function Dashboard() {
             className='wd-dashboard-course-link'
             to='/Kanbas/Courses/5800/Home'
           >
-            <img
-              src='src/assets/images/Northeastern_Wordmark.webp'
-              width={200}
-              alt=''
-            />
+            <img src='/images/Northeastern_Wordmark.webp' width={200} alt='' />
             <div>
               <h5>CS5800</h5>
               <p className='wd-dashboard-course-title'>Algorithms</p>
@@ -83,6 +73,8 @@ export default function Dashboard() {
             </div>
           </Link>{" "}
         </div>
+        <br />
+        <br />
         {/* course 5 */}
         <div className='wd-dashboard-course'>
           {" "}
@@ -90,11 +82,7 @@ export default function Dashboard() {
             className='wd-dashboard-course-link'
             to='/Kanbas/Courses/6410/Home'
           >
-            <img
-              src='src/assets/images/Northeastern_Wordmark.webp'
-              width={200}
-              alt=''
-            />
+            <img src='/images/Northeastern_Wordmark.webp' width={200} alt='' />
             <div>
               <h5>CS6410</h5>
               <p className='wd-dashboard-course-title'>Compilers</p>
@@ -102,6 +90,8 @@ export default function Dashboard() {
             </div>
           </Link>{" "}
         </div>
+        <br />
+        <br />
         {/* course 6 */}
         <div className='wd-dashboard-course'>
           {" "}
@@ -109,11 +99,7 @@ export default function Dashboard() {
             className='wd-dashboard-course-link'
             to='/Kanbas/Courses/6640/Home'
           >
-            <img
-              src='src/assets/images/Northeastern_Wordmark.webp'
-              width={200}
-              alt=''
-            />
+            <img src='/images/Northeastern_Wordmark.webp' width={200} alt='' />
             <div>
               <h5>CS6640</h5>
               <p className='wd-dashboard-course-title'>
@@ -123,6 +109,8 @@ export default function Dashboard() {
             </div>
           </Link>{" "}
         </div>
+        <br />
+        <br />
         {/* course 7 */}
         <div className='wd-dashboard-course'>
           {" "}
@@ -130,11 +118,7 @@ export default function Dashboard() {
             className='wd-dashboard-course-link'
             to='/Kanbas/Courses/6650/Home'
           >
-            <img
-              src='src/assets/images/Northeastern_Wordmark.webp'
-              width={200}
-              alt=''
-            />
+            <img src='/images/Northeastern_Wordmark.webp' width={200} alt='' />
             <div>
               <h5>CS6650</h5>
               <p className='wd-dashboard-course-title'>
