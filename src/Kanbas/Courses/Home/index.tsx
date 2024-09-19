@@ -1,5 +1,5 @@
 import Modules from "../../Modules";
-import CourseStatus from "../Status";
+// import CourseStatus from "../Status";
 export default function Home() {
   return (
     <table id='wd-home'>
@@ -7,9 +7,9 @@ export default function Home() {
         <td valign='top'>
           <Modules />
         </td>
-        <td valign='top'>
+        {/* <td valign='top'>
           <CourseStatus />
-        </td>
+        </td> */}
       </tr>
     </table>
   );

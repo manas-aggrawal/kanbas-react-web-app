@@ -3,7 +3,7 @@ export default function Profile() {
   return (
     <div id='wd-profile-screen'>
       <h3>Profile</h3>
-      <input id='wd-username' value='alice' placeholder='username' />
+      <input id='wd-username' value='manas' placeholder='username' />
       <br />
       <input
         id='wd-password'
@@ -12,13 +12,13 @@ export default function Profile() {
         type='password'
       />
       <br />
-      <input id='wd-firstname' value='Alice' placeholder='First Name' />
+      <input id='wd-firstname' value='manas' placeholder='First Name' />
       <br />
-      <input id='wd-lastname' value='Wonderland' placeholder='Last Name' />
+      <input id='wd-lastname' value='aggrawal' placeholder='Last Name' />
       <br />
-      <input id='wd-dob' value='2000-01-01' type='date' />
+      <input id='wd-dob' value='1999-01-07' type='date' />
       <br />
-      <input id='wd-email' value='alice@wonderland' type='email' />
+      <input id='wd-email' value='manasagg7199@gmail.com' type='email' />
       <br />
       <select id='wd-role'>
         <option value='USER'>User</option>
