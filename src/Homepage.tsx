@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function HomePage() {
   return (
     <div>
@@ -11,9 +13,12 @@ export default function HomePage() {
             <a href='#/labs'>Labs</a>
           </li>
           <li id='wd-github'>
-            <a href='https://github.com/manas-aggrawal/kanbas-react-web-app'>
-              Github Kanbas repo
-            </a>
+            <Link
+              to='https://github.com/manas-aggrawal/kanbas-react-web-app'
+              id='wd-github'
+            >
+              Github Repo link
+            </Link>
           </li>
         </ul>
       </nav>

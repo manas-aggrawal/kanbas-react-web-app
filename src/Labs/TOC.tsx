@@ -23,7 +23,7 @@ export default function TOC() {
           to='https://github.com/manas-aggrawal/kanbas-react-web-app'
           id='wd-github'
         >
-          Manas Aggrawal
+          Manas Aggrawal Github
         </Link>
       </li>
     </ul>
