@@ -2,6 +2,10 @@ import { Link } from "react-router-dom";
 export default function KanbasNavigation() {
   return (
     <div id='wd-kanbas-navigation'>
+      <Link to='/' id='wd-home-link'>
+        Home
+      </Link>
+      <br />
       <a
         href='https://www.northeastern.edu/'
         id='wd-neu-link'
@@ -11,6 +15,7 @@ export default function KanbasNavigation() {
         Northeastern
       </a>
       <br />
+
       <Link to='/Kanbas/Account' id='wd-account-link'>
         Account
       </Link>
@@ -34,7 +39,6 @@ export default function KanbasNavigation() {
       <Link to='/Labs' id='wd-labs-link'>
         Labs
       </Link>
-      <br />
     </div>
   );
 }

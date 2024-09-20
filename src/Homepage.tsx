@@ -17,7 +17,7 @@ export default function HomePage() {
               to='https://github.com/manas-aggrawal/kanbas-react-web-app'
               id='wd-github'
             >
-              Github Repo link
+              Manas Aggrawal Kanbas Github Repo
             </Link>
           </li>
         </ul>
