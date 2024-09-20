@@ -71,8 +71,12 @@ export default function Lab1() {
           <li>Red Mars</li>
           <li>The Forever War</li>
         </ul>
-        Your favorite books (in no particular order)
-        <ul id='wd-your-books'>{/* complete on your own */}</ul>
+        Manas' favorite books (in no particular order)
+        <ul id='wd-manas-books'>
+          <li>Three men in a boat</li>
+          <li>The canterville ghost</li>
+          <li>The invisible man</li>
+        </ul>
       </div>
       <div id='wd-tables'>
         <h4>Table Tag</h4>
