@@ -35,6 +35,9 @@ body * {
 .wd-lesson {
   border-left: 3px solid green !important;
 }
+.wd-lesson:hover {
+  background-color: lightblue;
+}
 
 #wd-add-assignment-group {
   align-items: end;
