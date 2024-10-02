@@ -199,7 +199,7 @@ export default function Dashboard() {
     <div id='wd-dashboard' className='container-fluid'>
       <h1 id='wd-dashboard-title'>Dashboard</h1>
       <hr />
-      <h2 id='wd-dashboard-published'>Published Courses (12)</h2>
+      <h2 id='wd-dashboard-published'>Published Courses (7)</h2>
       <hr />
       <div
         id='wd-dashboard-courses'
