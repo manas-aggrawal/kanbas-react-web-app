@@ -45,3 +45,7 @@ body * {
   margin: 0; /* Remove margin */
   padding: 0; /* Remove padding */
 }
+
+.wd-assignment-list-item:hover {
+  background-color: lightblue;
+}
