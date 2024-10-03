@@ -52,3 +52,42 @@ body * {
 .wd-assignment-list-item:hover {
   background-color: lightblue;
 }
+
+/* Kanbas navigation icon swirl */
+.custom-toggler {
+  width: 50px; /* Adjust size as needed */
+  height: 50px; /* Adjust size as needed */
+  filter: invert(15%) sepia(95%) saturate(6932%) hue-rotate(0deg)
+    brightness(97%) contrast(112%); /* This makes the image red */
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.custom-toggler:hover {
+  animation: swirl 0.5s ease-in-out;
+}
+
+@keyframes swirl {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.toggle-menu-img {
+  height: 50px;
+  width: 50px;
+}
+
+.offcanvas-body .list-group-item:hover {
+  text-decoration: underline;
+}
+/* Define your own CSS to hide and show the offcanvas */
+.offcanvas-hidden {
+  display: none;
+}
+.offcanvas-visible {
+  display: block; /* Or use flex depending on layout */
+}
