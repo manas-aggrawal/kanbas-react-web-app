@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import { FaPlus } from "react-icons/fa6";
 import GreenCheckmark from "./GreenCheckmark";
+import { MdDoNotDisturbAlt } from "react-icons/md";
 
 export default function ModulesControls() {
   return (
@@ -52,7 +53,7 @@ export default function ModulesControls() {
               className='dropdown-item'
               href='#'
             >
-              <GreenCheckmark />
+              <MdDoNotDisturbAlt className='me-1 fs-5' />
               UnPublish all modules and items
             </a>
           </li>
@@ -63,22 +64,10 @@ export default function ModulesControls() {
               className='dropdown-item'
               href='#'
             >
-              <GreenCheckmark />
+              <MdDoNotDisturbAlt className='me-1 fs-5' />
               UnPublish modules only
             </a>
           </li>
-
-          <li>
-            <a
-              id='wd-publish-all-modules-and-items-btn'
-              className='dropdown-item'
-              href='#'
-            >
-              <GreenCheckmark />
-              Publish all modules and items
-            </a>
-          </li>
-          <li></li>
         </ul>
         {/* Implement the View Progress and Collapse All buttons with IDs wd-view-progress and wd-collapse-all */}
         <button id='wd-collapse-all' className='btn btn-lg btn-secondary me-1'>
