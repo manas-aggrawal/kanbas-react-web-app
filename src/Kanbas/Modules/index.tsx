@@ -19,6 +19,9 @@ export default function Modules() {
                 <li className='wd-content-item'>
                   Learn what is Web Development
                 </li>
+                <li className='wd-content-item'>
+                  Different Web Development Technologies
+                </li>
               </ul>
             </li>
           </ul>
@@ -28,6 +31,25 @@ export default function Modules() {
           <ul className='wd-lessons'>
             <li className='wd-lesson'>
               <span className='wd-title'>LEARNING OBJECTIVES</span>
+              <ul className='wd-content'>
+                <li className='wd-content-item'>Introduction to the HTML</li>
+                <li className='wd-content-item'>HTML syntax</li>
+                <li className='wd-content-item'>HTML Tags</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li className='wd-module'>
+          <div className='wd-title'>Week 3</div>
+          <ul className='wd-lessons'>
+            <li className='wd-lesson'>
+              <span className='wd-title'>LEARNING OBJECTIVES</span>
+              <ul className='wd-content'>
+                <li className='wd-content-item'>Introduction to the CSS</li>
+                <li className='wd-content-item'>CSS syntax</li>
+                <li className='wd-content-item'>CSS styling</li>
+                <li className='wd-content-item'>CSS class and id</li>
+              </ul>
             </li>
           </ul>
         </li>
