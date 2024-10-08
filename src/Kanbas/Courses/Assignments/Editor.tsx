@@ -30,7 +30,7 @@ export default function AssignmentEditor() {
             <label htmlFor='wd-points'>Points</label>
           </td>
           <td>
-            <input id='wd-points' value={100} />
+            <input id='wd-points' type='number' defaultValue={100} />
           </td>
         </tr>
         <br />
@@ -127,6 +127,8 @@ export default function AssignmentEditor() {
             <td align='left' valign='top'>
               <select name='assign-to' id='wd-assign-to'>
                 <option value='everyone'>Everyone</option>
+                <option value='everyone'>Students</option>
+                <option value='everyone'>Manas Aggrawal</option>
               </select>
             </td>
           </tr>
@@ -140,7 +142,12 @@ export default function AssignmentEditor() {
           </tr>
           <tr>
             <td align='left' valign='top'>
-              <input type='date' name='due-date' id='wd-due-date' />
+              <input
+                type='date'
+                name='due-date'
+                id='wd-due-date'
+                defaultValue='2023-10-07'
+              />
             </td>
           </tr>
           <br />
@@ -155,7 +162,12 @@ export default function AssignmentEditor() {
           </tr>
           <tr>
             <td align='left' valign='top'>
-              <input type='date' name='available-from' id='wd-available-from' />
+              <input
+                type='date'
+                name='available-from'
+                id='wd-available-from'
+                defaultValue='2023-10-07'
+              />
             </td>
 
             <td align='left' valign='top'>
@@ -163,6 +175,7 @@ export default function AssignmentEditor() {
                 type='date'
                 name='available-until'
                 id='wd-available-until'
+                defaultValue='2023-10-07'
               />
             </td>
           </tr>
