@@ -16,7 +16,11 @@ export default function AssignmentEditor() {
         <label htmlFor='wd-name'>Assignment Name</label>
       </h3>
 
-      <input id='wd-name' className='form-control' value='A1 - ENV + HTML' />
+      <input
+        id='wd-name'
+        className='form-control'
+        defaultValue='A1 - ENV + HTML'
+      />
       <br />
       <br />
       <textarea id='wd-description' className='form-control'>
@@ -36,7 +40,12 @@ export default function AssignmentEditor() {
             </label>
           </div>
           <div className='col-md-9'>
-            <input id='wd-points' className='form-control' value={100} />
+            <input
+              id='wd-points'
+              className='form-control'
+              type='number'
+              defaultValue={100}
+            />
           </div>
         </div>
 
@@ -173,6 +182,8 @@ export default function AssignmentEditor() {
                   className='form-select'
                 >
                   <option value='everyone'>Everyone</option>
+                  <option value='everyone'>Students</option>
+                  <option value='everyone'>Manas Aggrawal</option>
                 </select>
               </div>
 
@@ -183,6 +194,7 @@ export default function AssignmentEditor() {
                   name='due-date'
                   id='wd-due-date'
                   className='form-control'
+                  defaultValue='2023-10-07'
                 />
               </div>
 
@@ -196,6 +208,7 @@ export default function AssignmentEditor() {
                     name='available-from'
                     id='wd-available-from'
                     className='form-control'
+                    defaultValue='2023-10-07'
                   />
                 </div>
                 <div className='col-md-6 mb-3'>
@@ -207,6 +220,7 @@ export default function AssignmentEditor() {
                     name='available-until'
                     id='wd-available-until'
                     className='form-control'
+                    defaultValue='2023-10-07'
                   />
                 </div>
               </div>
