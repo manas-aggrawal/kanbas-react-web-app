@@ -1,4 +1,4 @@
-const assignment = require("./assignments.json");
+const assignment = require("../assignments.json");
 const fs = require('fs');
 const path = require('path');
 
