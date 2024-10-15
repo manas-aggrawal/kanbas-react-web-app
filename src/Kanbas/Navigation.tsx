@@ -7,6 +7,13 @@ import "./styles.css";
 
 export default function KanbasNavigation() {
   const { pathname } = useLocation();
+  const links = [
+    { label: "Dashboard", path: "/Kanbas/Dashboard", icon: AiOutlineDashboard },
+    { label: "Courses", path: "/Kanbas/Dashboard", icon: LiaBookSolid },
+    { label: "Calendar", path: "/Kanbas/Calendar", icon: IoCalendarOutline },
+    { label: "Inbox", path: "/Kanbas/Inbox", icon: FaInbox },
+    { label: "Labs", path: "/Labs", icon: LiaCogSolid },
+  ];
 
   return (
     <>
@@ -18,7 +25,7 @@ export default function KanbasNavigation() {
         data-bs-target='#kanbasNavOffcanvas'
       />
 
-      {/* Toggle kanbas navigation */}
+      {/* TOGGLE KANBAS NAVIGATION */}
       <div
         className='offcanvas offcanvas-start d-md-none w-100'
         data-bs-backdrop='false'
@@ -72,62 +79,23 @@ export default function KanbasNavigation() {
               <br />
               Account{" "}
             </Link>
-            <br />
-            <Link
-              to='/Kanbas/Dashboard'
-              id='wd-dashboard-link'
-              className='list-group-item text-center border-0 bg-white text-danger'
-            >
-              <AiOutlineDashboard className='fs-1 text-danger' />
-              <br />
-              Dashboard{" "}
-            </Link>
-            <br />
-            <Link
-              to='/Kanbas/Courses/5610/Home'
-              id='wd-course-link'
-              className='list-group-item text-center border-0 bg-white text-danger'
-            >
-              <LiaBookSolid className='fs-1 text-danger' />
-              <br />
-              Courses{" "}
-            </Link>
-
-            <br />
-            <Link
-              to='/Kanbas/Calendar'
-              id='wd-calendar-link'
-              className='list-group-item text-center border-0 bg-white text-danger'
-            >
-              <IoCalendarOutline className='fs-1 text-danger' />
-              <br />
-              Calendar
-            </Link>
-            <br />
-            <Link
-              to='/Kanbas/Inbox'
-              id='wd-inbox-link'
-              className='list-group-item text-center border-0 bg-white text-danger'
-            >
-              <FaInbox className='fs-1 text-danger' />
-              <br />
-              Inbox
-            </Link>
-            <br />
-            <Link
-              to='/Labs'
-              id='wd-labs-link'
-              className='list-group-item text-center border-0 bg-white text-danger'
-            >
-              <LiaCogSolid className='fs-1 text-danger' />
-              <br />
-              Labs
-            </Link>
+            {/* DYNAMIC CONTENT RENDERING FOR TOGGLE NAVIGATION */}
+            {links.map((link) => (
+              <Link
+                key={link.path}
+                to={link.path}
+                className='list-group-item text-center border-0 bg-white text-danger'
+              >
+                {link.icon({ className: "fs-1 text-danger" })}
+                <br />
+                {link.label}
+              </Link>
+            ))}
           </div>
         </div>
       </div>
 
-      {/* Main Kanbas navigation */}
+      {/* MAIN KANBAS NAVIGATION */}
       <div
         id='wd-kanbas-navigation'
         style={{ width: 120 }}
@@ -163,76 +131,23 @@ export default function KanbasNavigation() {
           Account{" "}
         </Link>
         <br />
-        <Link
-          to='/Kanbas/Dashboard'
-          id='wd-dashboard-link'
-          className={`list-group-item text-center border-0  ${
-            pathname.includes("Dashboard")
-              ? "bg-white text-danger"
-              : "bg-black text-white"
-          }`}
-        >
-          <AiOutlineDashboard className='fs-1 text-danger' />
-          <br />
-          Dashboard{" "}
-        </Link>
-        <br />
-        <Link
-          to='/Kanbas/Courses/5610/Home'
-          id='wd-course-link'
-          className={`list-group-item text-center border-0  ${
-            pathname.includes("Courses")
-              ? "bg-white text-danger"
-              : "bg-black text-white"
-          }`}
-        >
-          <LiaBookSolid className='fs-1 text-danger' />
-          <br />
-          Courses{" "}
-        </Link>
-
-        <br />
-        <Link
-          to='/Kanbas/Calendar'
-          id='wd-calendar-link'
-          className={`list-group-item text-center border-0  ${
-            pathname.includes("Calendar")
-              ? "bg-white text-danger"
-              : "bg-black text-white"
-          }`}
-        >
-          <IoCalendarOutline className='fs-1 text-danger' />
-          <br />
-          Calendar
-        </Link>
-        <br />
-        <Link
-          to='/Kanbas/Inbox'
-          id='wd-inbox-link'
-          className={`list-group-item text-center border-0  ${
-            pathname.includes("Inbox")
-              ? "bg-white text-danger"
-              : "bg-black text-white"
-          }`}
-        >
-          <FaInbox className='fs-1 text-danger' />
-          <br />
-          Inbox
-        </Link>
-        <br />
-        <Link
-          to='/Labs'
-          id='wd-labs-link'
-          className={`list-group-item text-center border-0  ${
-            pathname.includes("Labs")
-              ? "bg-white text-danger"
-              : "bg-black text-white"
-          }`}
-        >
-          <LiaCogSolid className='fs-1 text-danger' />
-          <br />
-          Labs
-        </Link>
+        {/* DYNAMIC CONTENT RENDERING FOR MAIN NAVIGATION */}
+        {links.map((link) => (
+          <Link
+            key={link.path}
+            to={link.path}
+            className={`list-group-item bg-black text-center border-0
+              ${
+                pathname.includes(link.label)
+                  ? "text-danger bg-white"
+                  : "text-white bg-black"
+              }`}
+          >
+            {link.icon({ className: "fs-1 text-danger" })}
+            <br />
+            {link.label}
+          </Link>
+        ))}
       </div>
     </>
   );

@@ -4,8 +4,13 @@ import { BsGripVertical } from "react-icons/bs";
 import { IoEllipsisVertical } from "react-icons/io5";
 import AssignmentControls from "./AssignmentControls";
 import GreenCheckmark from "../Modules/GreenCheckmark";
+import { useParams } from "react-router";
+import * as db from "../../Database";
 
 export default function Assignments() {
+  const { cid } = useParams();
+  const assignments = db.assignments;
+
   return (
     <div id='wd-assignments'>
       <div className='d-flex justify-content-between align-items-center mb-5'>
@@ -64,75 +69,34 @@ export default function Assignments() {
           id='wd-assignment-list'
           className='assignment-list-group list-group rounded-0'
         >
-          <li className='wd-assignment-list-item p-2 d-flex align-items-center border border-1'>
-            <AssignmentControls />
-            <div className='ms-2'>
-              <a
-                className='wd-assignment-link text-decoration-none text-black fw-bold'
-                href='#/Kanbas/Courses/5610/Assignments/5610'
-              >
-                A1 - ENV + HTML
-              </a>
-              <p className='wd-assignment-link mb-0 fs-6'>
-                <span className='text-danger'>Multiple Modules</span> |{" "}
-                <b>Not Available until</b> October 1, 2024 |
-                <br />
-                <b>Due</b> October 20, 2024
-              </p>
-            </div>
-            {/* Icons added here and aligned to the right */}
-            <div className='ms-auto d-flex'>
-              <GreenCheckmark />
-              <IoEllipsisVertical className='fs-4' />
-              {/* Second icon with right margin */}
-            </div>
-          </li>
+          {assignments
+            .filter((assignment) => assignment.course === cid)
+            .map((asgn) => (
+              <li className='wd-assignment-list-item p-2 d-flex align-items-center border border-1'>
+                <AssignmentControls />
+                <div className='ms-2'>
+                  <a
+                    className='wd-assignment-link text-decoration-none text-black'
+                    href={`#/Kanbas/Courses/${cid}/Assignments/${asgn._id}`}
+                  >
+                    {asgn.title}
 
-          <li className='wd-assignment-list-item p-2 d-flex align-items-center border border-1'>
-            <AssignmentControls />
-            <div className='ms-2'>
-              <a
-                className='wd-assignment-link text-decoration-none text-black fw-bold'
-                href='#/Kanbas/Courses/5610/Assignments/5610'
-              >
-                A2 - CSS + Bootstrap
-              </a>
-              <p className='wd-assignment-link mb-0'>
-                <span className='text-danger'>Multiple Modules</span> |{" "}
-                <b>Not Available until</b> October 2, 2024 | <br />
-                <b>Due </b> October 21, 2024
-              </p>
-            </div>
-            {/* Icons added here and aligned to the right */}
-            <div className='ms-auto d-flex'>
-              <GreenCheckmark />
-              <IoEllipsisVertical className='fs-4' />
-              {/* Second icon with right margin */}
-            </div>
-          </li>
-
-          <li className='wd-assignment-list-item p-2 d-flex align-items-center border border-1'>
-            <AssignmentControls />
-            <div className='ms-2'>
-              <a
-                className='wd-assignment-link text-decoration-none text-black fw-bold'
-                href='#/Kanbas/Courses/5610/Assignments/5610'
-              >
-                A3 - JavaScript + React
-              </a>
-              <p className='wd-assignment-link mb-0'>
-                <span className='text-danger'>Multiple Modules</span> |{" "}
-                <b>Not Available until</b> October 3, 2024 | <br />
-                <b>Due </b> October 22, 2024
-              </p>
-            </div>
-            {/* Icons added here and aligned to the right */}
-            <div className='ms-auto d-flex'>
-              <GreenCheckmark />
-              <IoEllipsisVertical className='fs-4' />
-              {/* Second icon with right margin */}
-            </div>
-          </li>
+                    <p className='wd-assignment-link mb-0 fs-6'>
+                      <span className='text-danger'>Multiple Modules</span> |{" "}
+                      <b>Not Available until</b> {asgn.availableFrom} |
+                      <br />
+                      <b>Due</b> {asgn.dueDate}
+                    </p>
+                  </a>
+                </div>
+                {/* Icons added here and aligned to the right */}
+                <div className='ms-auto d-flex'>
+                  <GreenCheckmark />
+                  <IoEllipsisVertical className='fs-4' />
+                  {/* Second icon with right margin */}
+                </div>
+              </li>
+            ))}
         </ul>
       </div>
     </div>
