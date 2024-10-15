@@ -1,4 +1,6 @@
 import { SetStateAction, useState } from "react";
+import { useParams } from "react-router";
+import * as db from "../../Database";
 
 export default function AssignmentEditor() {
   // State to store the selected option
@@ -10,6 +12,10 @@ export default function AssignmentEditor() {
   }) => {
     setSelectedOption(event.target.value);
   };
+  const { cid, aid } = useParams();
+  const assignments = db.assignments;
+  const assignment = assignments.find((a) => a._id === aid);
+
   return (
     <div id='wd-assignments-editor' className='form-check ms-5 ps-5 me-3'>
       <h3>
@@ -19,12 +25,12 @@ export default function AssignmentEditor() {
       <input
         id='wd-name'
         className='form-control'
-        defaultValue='A1 - ENV + HTML'
+        defaultValue={`${assignment?.title}`}
       />
       <br />
       <br />
       <textarea id='wd-description' className='form-control'>
-        The assignment is available online Submit a link to the landing page of
+        {assignment?.description}
       </textarea>
       <br />
 
@@ -44,7 +50,7 @@ export default function AssignmentEditor() {
               id='wd-points'
               className='form-control'
               type='number'
-              defaultValue={100}
+              defaultValue={`${assignment?.points}`}
             />
           </div>
         </div>
@@ -194,7 +200,7 @@ export default function AssignmentEditor() {
                   name='due-date'
                   id='wd-due-date'
                   className='form-control'
-                  defaultValue='2023-10-07'
+                  defaultValue={`${assignment?.dueDate}`}
                 />
               </div>
 
@@ -208,7 +214,7 @@ export default function AssignmentEditor() {
                     name='available-from'
                     id='wd-available-from'
                     className='form-control'
-                    defaultValue='2023-10-07'
+                    defaultValue={`${assignment?.availableFrom}`}
                   />
                 </div>
                 <div className='col-md-6 mb-3'>
@@ -220,7 +226,7 @@ export default function AssignmentEditor() {
                     name='available-until'
                     id='wd-available-until'
                     className='form-control'
-                    defaultValue='2023-10-07'
+                    defaultValue={`${assignment?.availableUntil}`}
                   />
                 </div>
               </div>
@@ -230,10 +236,14 @@ export default function AssignmentEditor() {
       </div>
       <hr />
       <div className='float-end'>
-        <button className='bg-gray btn btn-secondary me-2 border-1'>
-          Cancel
-        </button>
-        <button className='bg-danger text-white btn'>Save</button>
+        <a href={`#/Kanbas/Courses/${cid}/Assignments`}>
+          <button className='bg-gray btn btn-secondary me-2 border-1'>
+            Cancel
+          </button>
+        </a>
+        <a href={`#/Kanbas/Courses/${cid}/Assignments`}>
+          <button className='bg-danger text-white btn'>Save</button>
+        </a>
       </div>
     </div>
   );

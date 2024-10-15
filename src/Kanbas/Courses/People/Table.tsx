@@ -1,5 +1,14 @@
 import { FaUserCircle } from "react-icons/fa";
+import { enrollments, people } from "../../Database";
+import { useParams } from "react-router";
+
 export default function PeopleTable() {
+  const { cid } = useParams();
+  const enrolledUserIds = enrollments
+    .filter((e) => e.course === cid)
+    .map((m) => m.user);
+  const enrolledUsers = people.filter((p) => enrolledUserIds.includes(p._id));
+
   return (
     <div id='wd-people-table'>
       <table className='table table-striped'>
@@ -14,55 +23,20 @@ export default function PeopleTable() {
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td className='wd-full-name text-nowrap'>
-              <FaUserCircle className='me-2 fs-1 text-secondary' />
-              <span className='wd-first-name'>Tony</span>{" "}
-              <span className='wd-last-name'>Stark</span>
-            </td>
-            <td className='wd-login-id'>001234561S</td>
-            <td className='wd-section'>S101</td>
-            <td className='wd-role'>STUDENT</td>
-            <td className='wd-last-activity'>2020-10-01</td>
-            <td className='wd-total-activity'>10:21:32</td>{" "}
-          </tr>
-          {/* Add at least 3 more users such as Bruce Wayne, Steve Rogers, and Natasha Romanoff */}
-          <tr>
-            <td className='wd-full-name text-nowrap'>
-              <FaUserCircle className='me-2 fs-1 text-secondary' />
-              <span className='wd-first-name'>Steve</span>{" "}
-              <span className='wd-last-name'>Rogers</span>
-            </td>
-            <td className='wd-login-id'>001234561A</td>
-            <td className='wd-section'>S100</td>
-            <td className='wd-role'>STUDENT</td>
-            <td className='wd-last-activity'>2020-10-01</td>
-            <td className='wd-total-activity'>10:21:32</td>{" "}
-          </tr>
-          <tr>
-            <td className='wd-full-name text-nowrap'>
-              <FaUserCircle className='me-2 fs-1 text-secondary' />
-              <span className='wd-first-name'>Dr</span>{" "}
-              <span className='wd-last-name'>Strange</span>
-            </td>
-            <td className='wd-login-id'>001234561T</td>
-            <td className='wd-section'>S110</td>
-            <td className='wd-role'>STUDENT</td>
-            <td className='wd-last-activity'>2020-10-01</td>
-            <td className='wd-total-activity'>10:21:32</td>{" "}
-          </tr>
-          <tr>
-            <td className='wd-full-name text-nowrap'>
-              <FaUserCircle className='me-2 fs-1 text-secondary' />
-              <span className='wd-first-name'>Natasha</span>{" "}
-              <span className='wd-last-name'>Romanoff</span>
-            </td>
-            <td className='wd-login-id'>001234561B</td>
-            <td className='wd-section'>S102</td>
-            <td className='wd-role'>STUDENT</td>
-            <td className='wd-last-activity'>2020-10-01</td>
-            <td className='wd-total-activity'>10:21:32</td>{" "}
-          </tr>
+          {enrolledUsers.map((eu) => (
+            <tr key={eu._id}>
+              <td className='wd-full-name text-nowrap'>
+                <FaUserCircle className='me-2 fs-1 text-secondary' />
+                <span className='wd-first-name'>{eu.firstName}</span>{" "}
+                <span className='wd-last-name'>{eu.lastName}</span>
+              </td>
+              <td className='wd-login-id'>{eu.loginId}</td>
+              <td className='wd-section'>{eu.section}</td>
+              <td className='wd-role'>{eu.role}</td>
+              <td className='wd-last-activity'>{eu.lastActivity}</td>
+              <td className='wd-total-activity'>{eu.totalActivity}</td>{" "}
+            </tr>
+          ))}
         </tbody>
       </table>
     </div>

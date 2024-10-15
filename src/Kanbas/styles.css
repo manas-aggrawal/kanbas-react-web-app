@@ -91,3 +91,10 @@ body * {
 .offcanvas-visible {
   display: block; /* Or use flex depending on layout */
 }
+
+/* This thing keeps the size of the images same throughout the cards */
+.card-img-top {
+  width: 100%; /* Make sure it fills the card width */
+  height: 200px; /* Set a fixed height */
+  object-fit: cover; /* Ensure the image covers the area without stretching */
+}

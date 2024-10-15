@@ -1,0 +1,3824 @@
+[
+  {
+    "_id": "M11",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS101",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M11"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M11"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M11"
+      }
+    ]
+  },
+  {
+    "_id": "M12",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS101",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M12"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M12"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M12"
+      }
+    ]
+  },
+  {
+    "_id": "M13",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS101",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M13"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M13"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M13"
+      }
+    ]
+  },
+  {
+    "_id": "M14",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS101",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M14"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M14"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M14"
+      }
+    ]
+  },
+  {
+    "_id": "M15",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS101",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M15"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M15"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M15"
+      }
+    ]
+  },
+  {
+    "_id": "M16",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS101",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M16"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M16"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M16"
+      }
+    ]
+  },
+  {
+    "_id": "M17",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS101",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M17"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M17"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M17"
+      }
+    ]
+  },
+  {
+    "_id": "M11",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS102",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M11"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M11"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M11"
+      }
+    ]
+  },
+  {
+    "_id": "M12",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS102",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M12"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M12"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M12"
+      }
+    ]
+  },
+  {
+    "_id": "M13",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS102",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M13"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M13"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M13"
+      }
+    ]
+  },
+  {
+    "_id": "M14",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS102",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M14"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M14"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M14"
+      }
+    ]
+  },
+  {
+    "_id": "M15",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS102",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M15"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M15"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M15"
+      }
+    ]
+  },
+  {
+    "_id": "M16",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS102",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M16"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M16"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M16"
+      }
+    ]
+  },
+  {
+    "_id": "M17",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS102",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M17"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M17"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M17"
+      }
+    ]
+  },
+  {
+    "_id": "M11",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS103",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M11"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M11"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M11"
+      }
+    ]
+  },
+  {
+    "_id": "M12",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS103",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M12"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M12"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M12"
+      }
+    ]
+  },
+  {
+    "_id": "M13",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS103",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M13"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M13"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M13"
+      }
+    ]
+  },
+  {
+    "_id": "M14",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS103",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M14"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M14"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M14"
+      }
+    ]
+  },
+  {
+    "_id": "M15",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS103",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M15"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M15"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M15"
+      }
+    ]
+  },
+  {
+    "_id": "M16",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS103",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M16"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M16"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M16"
+      }
+    ]
+  },
+  {
+    "_id": "M17",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS103",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M17"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M17"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M17"
+      }
+    ]
+  },
+  {
+    "_id": "M11",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS104",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M11"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M11"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M11"
+      }
+    ]
+  },
+  {
+    "_id": "M12",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS104",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M12"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M12"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M12"
+      }
+    ]
+  },
+  {
+    "_id": "M13",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS104",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M13"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M13"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M13"
+      }
+    ]
+  },
+  {
+    "_id": "M14",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS104",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M14"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M14"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M14"
+      }
+    ]
+  },
+  {
+    "_id": "M15",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS104",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M15"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M15"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M15"
+      }
+    ]
+  },
+  {
+    "_id": "M16",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS104",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M16"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M16"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M16"
+      }
+    ]
+  },
+  {
+    "_id": "M17",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS104",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M17"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M17"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M17"
+      }
+    ]
+  },
+  {
+    "_id": "M11",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS105",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M11"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M11"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M11"
+      }
+    ]
+  },
+  {
+    "_id": "M12",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS105",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M12"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M12"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M12"
+      }
+    ]
+  },
+  {
+    "_id": "M13",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS105",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M13"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M13"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M13"
+      }
+    ]
+  },
+  {
+    "_id": "M14",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS105",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M14"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M14"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M14"
+      }
+    ]
+  },
+  {
+    "_id": "M15",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS105",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M15"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M15"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M15"
+      }
+    ]
+  },
+  {
+    "_id": "M16",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS105",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M16"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M16"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M16"
+      }
+    ]
+  },
+  {
+    "_id": "M17",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS105",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M17"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M17"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M17"
+      }
+    ]
+  },
+  {
+    "_id": "M11",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS106",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M11"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M11"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M11"
+      }
+    ]
+  },
+  {
+    "_id": "M12",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS106",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M12"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M12"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M12"
+      }
+    ]
+  },
+  {
+    "_id": "M13",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS106",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M13"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M13"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M13"
+      }
+    ]
+  },
+  {
+    "_id": "M14",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS106",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M14"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M14"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M14"
+      }
+    ]
+  },
+  {
+    "_id": "M15",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS106",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M15"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M15"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M15"
+      }
+    ]
+  },
+  {
+    "_id": "M16",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS106",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M16"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M16"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M16"
+      }
+    ]
+  },
+  {
+    "_id": "M17",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS106",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M17"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M17"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M17"
+      }
+    ]
+  },
+  {
+    "_id": "M11",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS107",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M11"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M11"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M11"
+      }
+    ]
+  },
+  {
+    "_id": "M12",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS107",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M12"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M12"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M12"
+      }
+    ]
+  },
+  {
+    "_id": "M13",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS107",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M13"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M13"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M13"
+      }
+    ]
+  },
+  {
+    "_id": "M14",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS107",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M14"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M14"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M14"
+      }
+    ]
+  },
+  {
+    "_id": "M15",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS107",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M15"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M15"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M15"
+      }
+    ]
+  },
+  {
+    "_id": "M16",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS107",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M16"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M16"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M16"
+      }
+    ]
+  },
+  {
+    "_id": "M17",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS107",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M17"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M17"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M17"
+      }
+    ]
+  },
+  {
+    "_id": "M11",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS108",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M11"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M11"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M11"
+      }
+    ]
+  },
+  {
+    "_id": "M12",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS108",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M12"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M12"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M12"
+      }
+    ]
+  },
+  {
+    "_id": "M13",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS108",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M13"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M13"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M13"
+      }
+    ]
+  },
+  {
+    "_id": "M14",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS108",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M14"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M14"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M14"
+      }
+    ]
+  },
+  {
+    "_id": "M15",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS108",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M15"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M15"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M15"
+      }
+    ]
+  },
+  {
+    "_id": "M16",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS108",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M16"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M16"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M16"
+      }
+    ]
+  },
+  {
+    "_id": "M17",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS108",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M17"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M17"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M17"
+      }
+    ]
+  },
+  {
+    "_id": "M11",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS109",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M11"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M11"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M11"
+      }
+    ]
+  },
+  {
+    "_id": "M12",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS109",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M12"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M12"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M12"
+      }
+    ]
+  },
+  {
+    "_id": "M13",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS109",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M13"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M13"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M13"
+      }
+    ]
+  },
+  {
+    "_id": "M14",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS109",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M14"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M14"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M14"
+      }
+    ]
+  },
+  {
+    "_id": "M15",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS109",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M15"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M15"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M15"
+      }
+    ]
+  },
+  {
+    "_id": "M16",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS109",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M16"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M16"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M16"
+      }
+    ]
+  },
+  {
+    "_id": "M17",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS109",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M17"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M17"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M17"
+      }
+    ]
+  },
+  {
+    "_id": "M11",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS110",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M11"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M11"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M11"
+      }
+    ]
+  },
+  {
+    "_id": "M12",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS110",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M12"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M12"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M12"
+      }
+    ]
+  },
+  {
+    "_id": "M13",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS110",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M13"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M13"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M13"
+      }
+    ]
+  },
+  {
+    "_id": "M14",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS110",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M14"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M14"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M14"
+      }
+    ]
+  },
+  {
+    "_id": "M15",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS110",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M15"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M15"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M15"
+      }
+    ]
+  },
+  {
+    "_id": "M16",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS110",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M16"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M16"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M16"
+      }
+    ]
+  },
+  {
+    "_id": "M17",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS110",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M17"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M17"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M17"
+      }
+    ]
+  },
+  {
+    "_id": "M11",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS111",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M11"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M11"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M11"
+      }
+    ]
+  },
+  {
+    "_id": "M12",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS111",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M12"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M12"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M12"
+      }
+    ]
+  },
+  {
+    "_id": "M13",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS111",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M13"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M13"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M13"
+      }
+    ]
+  },
+  {
+    "_id": "M14",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS111",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M14"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M14"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M14"
+      }
+    ]
+  },
+  {
+    "_id": "M15",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS111",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M15"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M15"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M15"
+      }
+    ]
+  },
+  {
+    "_id": "M16",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS111",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M16"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M16"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M16"
+      }
+    ]
+  },
+  {
+    "_id": "M17",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS111",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M17"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M17"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M17"
+      }
+    ]
+  },
+  {
+    "_id": "M11",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS112",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M11"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M11"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M11"
+      }
+    ]
+  },
+  {
+    "_id": "M12",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS112",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M12"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M12"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M12"
+      }
+    ]
+  },
+  {
+    "_id": "M13",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS112",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M13"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M13"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M13"
+      }
+    ]
+  },
+  {
+    "_id": "M14",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS112",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M14"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M14"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M14"
+      }
+    ]
+  },
+  {
+    "_id": "M15",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS112",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M15"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M15"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M15"
+      }
+    ]
+  },
+  {
+    "_id": "M16",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS112",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M16"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M16"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M16"
+      }
+    ]
+  },
+  {
+    "_id": "M17",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS112",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M17"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M17"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M17"
+      }
+    ]
+  },
+  {
+    "_id": "M11",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS113",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M11"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M11"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M11"
+      }
+    ]
+  },
+  {
+    "_id": "M12",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS113",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M12"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M12"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M12"
+      }
+    ]
+  },
+  {
+    "_id": "M13",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS113",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M13"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M13"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M13"
+      }
+    ]
+  },
+  {
+    "_id": "M14",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS113",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M14"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M14"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M14"
+      }
+    ]
+  },
+  {
+    "_id": "M15",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS113",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M15"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M15"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M15"
+      }
+    ]
+  },
+  {
+    "_id": "M16",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS113",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M16"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M16"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M16"
+      }
+    ]
+  },
+  {
+    "_id": "M17",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS113",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M17"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M17"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M17"
+      }
+    ]
+  },
+  {
+    "_id": "M11",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS114",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M11"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M11"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M11"
+      }
+    ]
+  },
+  {
+    "_id": "M12",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS114",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M12"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M12"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M12"
+      }
+    ]
+  },
+  {
+    "_id": "M13",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS114",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M13"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M13"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M13"
+      }
+    ]
+  },
+  {
+    "_id": "M14",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS114",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M14"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M14"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M14"
+      }
+    ]
+  },
+  {
+    "_id": "M15",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS114",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M15"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M15"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M15"
+      }
+    ]
+  },
+  {
+    "_id": "M16",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS114",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M16"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M16"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M16"
+      }
+    ]
+  },
+  {
+    "_id": "M17",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS114",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M17"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M17"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M17"
+      }
+    ]
+  },
+  {
+    "_id": "M11",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS115",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M11"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M11"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M11"
+      }
+    ]
+  },
+  {
+    "_id": "M12",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS115",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M12"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M12"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M12"
+      }
+    ]
+  },
+  {
+    "_id": "M13",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS115",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M13"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M13"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M13"
+      }
+    ]
+  },
+  {
+    "_id": "M14",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS115",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M14"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M14"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M14"
+      }
+    ]
+  },
+  {
+    "_id": "M15",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS115",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M15"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M15"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M15"
+      }
+    ]
+  },
+  {
+    "_id": "M16",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS115",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M16"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M16"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M16"
+      }
+    ]
+  },
+  {
+    "_id": "M17",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS115",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M17"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M17"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M17"
+      }
+    ]
+  },
+  {
+    "_id": "M11",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS116",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M11"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M11"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M11"
+      }
+    ]
+  },
+  {
+    "_id": "M12",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS116",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M12"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M12"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M12"
+      }
+    ]
+  },
+  {
+    "_id": "M13",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS116",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M13"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M13"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M13"
+      }
+    ]
+  },
+  {
+    "_id": "M14",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS116",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M14"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M14"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M14"
+      }
+    ]
+  },
+  {
+    "_id": "M15",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS116",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M15"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M15"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M15"
+      }
+    ]
+  },
+  {
+    "_id": "M16",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS116",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M16"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M16"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M16"
+      }
+    ]
+  },
+  {
+    "_id": "M17",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS116",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M17"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M17"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M17"
+      }
+    ]
+  },
+  {
+    "_id": "M11",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS117",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M11"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M11"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M11"
+      }
+    ]
+  },
+  {
+    "_id": "M12",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS117",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M12"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M12"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M12"
+      }
+    ]
+  },
+  {
+    "_id": "M13",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS117",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M13"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M13"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M13"
+      }
+    ]
+  },
+  {
+    "_id": "M14",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS117",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M14"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M14"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M14"
+      }
+    ]
+  },
+  {
+    "_id": "M15",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS117",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M15"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M15"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M15"
+      }
+    ]
+  },
+  {
+    "_id": "M16",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS117",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M16"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M16"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M16"
+      }
+    ]
+  },
+  {
+    "_id": "M17",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS117",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M17"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M17"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M17"
+      }
+    ]
+  },
+  {
+    "_id": "M11",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS118",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M11"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M11"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M11"
+      }
+    ]
+  },
+  {
+    "_id": "M12",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS118",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M12"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M12"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M12"
+      }
+    ]
+  },
+  {
+    "_id": "M13",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS118",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M13"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M13"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M13"
+      }
+    ]
+  },
+  {
+    "_id": "M14",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS118",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M14"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M14"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M14"
+      }
+    ]
+  },
+  {
+    "_id": "M15",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS118",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M15"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M15"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M15"
+      }
+    ]
+  },
+  {
+    "_id": "M16",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS118",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M16"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M16"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M16"
+      }
+    ]
+  },
+  {
+    "_id": "M17",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS118",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M17"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M17"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M17"
+      }
+    ]
+  },
+  {
+    "_id": "M11",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS119",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M11"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M11"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M11"
+      }
+    ]
+  },
+  {
+    "_id": "M12",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS119",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M12"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M12"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M12"
+      }
+    ]
+  },
+  {
+    "_id": "M13",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS119",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M13"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M13"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M13"
+      }
+    ]
+  },
+  {
+    "_id": "M14",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS119",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M14"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M14"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M14"
+      }
+    ]
+  },
+  {
+    "_id": "M15",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS119",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M15"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M15"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M15"
+      }
+    ]
+  },
+  {
+    "_id": "M16",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS119",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M16"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M16"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M16"
+      }
+    ]
+  },
+  {
+    "_id": "M17",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS119",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M17"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M17"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M17"
+      }
+    ]
+  },
+  {
+    "_id": "M11",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS120",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M11"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M11"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M11"
+      }
+    ]
+  },
+  {
+    "_id": "M12",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS120",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M12"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M12"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M12"
+      }
+    ]
+  },
+  {
+    "_id": "M13",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS120",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M13"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M13"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M13"
+      }
+    ]
+  },
+  {
+    "_id": "M14",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS120",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M14"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M14"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M14"
+      }
+    ]
+  },
+  {
+    "_id": "M15",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS120",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M15"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M15"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M15"
+      }
+    ]
+  },
+  {
+    "_id": "M16",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS120",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M16"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M16"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M16"
+      }
+    ]
+  },
+  {
+    "_id": "M17",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS120",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M17"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M17"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M17"
+      }
+    ]
+  },
+  {
+    "_id": "M11",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS121",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M11"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M11"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M11"
+      }
+    ]
+  },
+  {
+    "_id": "M12",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS121",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M12"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M12"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M12"
+      }
+    ]
+  },
+  {
+    "_id": "M13",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS121",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M13"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M13"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M13"
+      }
+    ]
+  },
+  {
+    "_id": "M14",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS121",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M14"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M14"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M14"
+      }
+    ]
+  },
+  {
+    "_id": "M15",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS121",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M15"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M15"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M15"
+      }
+    ]
+  },
+  {
+    "_id": "M16",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS121",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M16"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M16"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M16"
+      }
+    ]
+  },
+  {
+    "_id": "M17",
+    "name": "Fuel and Combustion",
+    "description": "Description for Fuel and Combustion.",
+    "course": "RS121",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "Lesson 1 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M17"
+      },
+      {
+        "_id": "L102",
+        "name": "Lesson 2 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M17"
+      },
+      {
+        "_id": "L103",
+        "name": "Lesson 3 for Fuel and Combustion",
+        "description": "This lesson covers the fundamentals of Fuel and Combustion topic.",
+        "module": "M17"
+      }
+    ]
+  }
+]
