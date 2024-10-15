@@ -1,45 +1,54 @@
-import { Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 export default function TOC() {
+  const { pathname } = useLocation();
   return (
-    <ul>
-      <li>
-        <Link to='/' id='wd-home-link'>
-          Home
-        </Link>
-      </li>
-      <li>
-        <Link to='/Labs' id='wd-labs-link'>
+    <ul className='nav nav-pills'>
+      <li className='nav-item'>
+        <a id='wd-a' href='#/Labs' className='nav-link'>
           Labs
-        </Link>
+        </a>
       </li>
-      <li>
-        <Link to='/Labs/Lab1' id='wd-lab1-link'>
+      <li className='nav-item'>
+        <a
+          id='wd-a1'
+          href='#/Labs/Lab1'
+          className={`nav-link ${pathname.includes("Lab1") ? "active" : ""}`}
+        >
           Lab 1
-        </Link>
+        </a>
       </li>
-      <li>
-        <Link to='/Labs/Lab2' id='wd-lab2-link'>
+      <li className='nav-item'>
+        <a
+          id='wd-a2'
+          href='#/Labs/Lab2'
+          className={`nav-link ${pathname.includes("Lab2") ? "active" : ""}`}
+        >
           Lab 2
-        </Link>
+        </a>
       </li>
-      <li>
-        <Link to='/Labs/Lab3' id='wd-lab3-link'>
+      <li className='nav-item'>
+        <a
+          id='wd-a3'
+          href='#/Labs/Lab3'
+          className={`nav-link ${pathname.includes("Lab3") ? "active" : ""}`}
+        >
           Lab 3
-        </Link>
+        </a>
       </li>
-      <li>
-        <Link to='/Kanbas' id='wd-kanbas-link'>
+      <li className='nav-item'>
+        <a id='wd-k' href='#/Kanbas' className='nav-link'>
           Kanbas
-        </Link>
+        </a>
       </li>
-      <li>
-        <Link
-          to='https://github.com/manas-aggrawal/kanbas-react-web-app'
+      <li className='nav-item'>
+        <a
+          className='nav-link'
+          href='https://github.com/manas-aggrawal/kanbas-react-web-app'
           id='wd-github'
         >
           Manas Aggrawal Kanbas Github Repo
-        </Link>
+        </a>
       </li>
     </ul>
   );
