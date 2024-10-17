@@ -34,7 +34,6 @@ export default function Courses() {
           </Routes>
         </div>
       </div>
-      {/* <Status /> */}
     </div>
   );
 }

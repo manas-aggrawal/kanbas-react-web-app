@@ -9,13 +9,10 @@ export default function Dashboard() {
       <hr />
       <h2 id='wd-dashboard-published'>Published Courses ({courses.length})</h2>
       <hr />
-      <div
-        id='wd-dashboard-courses'
-        className='row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4'
-      >
+      <div id='wd-dashboard-courses' className='row g-4'>
         {courses.map((course) => (
-          <div className='col'>
-            <div className='card h-100 rounded-3 overflow-hidden'>
+          <div className='col-12 col-md-6 col-lg-4 col-xl-3 d-flex'>
+            <div className='card h-100 w-100 rounded-3 overflow-hidden'>
               <Link
                 to={`/Kanbas/Courses/${course._id}/Home`}
                 className='wd-dashboard-course-link text-decoration-none text-dark'

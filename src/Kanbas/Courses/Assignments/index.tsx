@@ -83,7 +83,8 @@ export default function Assignments() {
 
                     <p className='wd-assignment-link mb-0 fs-6'>
                       <span className='text-danger'>Multiple Modules</span> |{" "}
-                      <b>Not Available until</b> {asgn.availableFrom} |
+                      <b>Not Available until</b> {asgn.availableFrom} |{" "}
+                      {asgn.points}
                       <br />
                       <b>Due</b> {asgn.dueDate}
                     </p>
