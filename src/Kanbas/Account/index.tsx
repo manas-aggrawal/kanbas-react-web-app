@@ -1,11 +1,14 @@
 import { Routes, Route, Navigate } from "react-router";
-import Profile from "./Profile";
-import Signin from "./signin";
-import Signup from "./Signup";
 import AccountNavigation from "./Navigation";
+import Signin from "./signin";
+import Profile from "./Profile";
+import Signup from "./Signup";
+import { useSelector } from "react-redux";
+
 export default function Account() {
+  const { currentUser } = useSelector((state: any) => state.accountReducer);
   return (
-    <div id='wd-account-screen' className='mb-3 ms-3 mt-4'>
+    <div id='wd-account-screen'>
       <h2>Account</h2>
       <table>
         <tr>
@@ -16,7 +19,15 @@ export default function Account() {
             <Routes>
               <Route
                 path='/'
-                element={<Navigate to='/Kanbas/Account/Signin' />}
+                element={
+                  <Navigate
+                    to={
+                      currentUser
+                        ? "/Kanbas/Account/Profile"
+                        : "/Kanbas/Account/Signin"
+                    }
+                  />
+                }
               />
               <Route path='/Signin' element={<Signin />} />
               <Route path='/Profile' element={<Profile />} />

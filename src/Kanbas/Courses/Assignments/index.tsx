@@ -1,25 +1,29 @@
-import { FaPlus, FaSearch } from "react-icons/fa";
-import "./../../styles.css";
+import React from "react";
+import { Link, useParams } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { deleteAssignment } from "./reducer";
+import { FaPlus, FaSearch, FaTrash } from "react-icons/fa";
 import { BsGripVertical } from "react-icons/bs";
 import { IoEllipsisVertical } from "react-icons/io5";
 import AssignmentControls from "./AssignmentControls";
 import GreenCheckmark from "../Modules/GreenCheckmark";
-import { useParams } from "react-router";
-import * as db from "../../Database";
 
-export default function Assignments() {
+function Assignments() {
   const { cid } = useParams();
-  const assignments = db.assignments;
+  const assignments = useSelector((state: any) =>
+    state.assignmentReducer.assignments.filter((a: any) => a.course === cid)
+  );
+  const dispatch = useDispatch();
+  const currentUser = useSelector(
+    (state: any) => state.accountReducer.currentUser
+  );
 
   return (
     <div id='wd-assignments'>
       <div className='d-flex justify-content-between align-items-center mb-5'>
-        {" "}
-        {/* Flex container for alignment */}
         <div className='input-group' style={{ width: "300px" }}>
-          {/* Search box with fixed width */}
           <span className='input-group-text bg-white'>
-            <FaSearch /> {/* Magnifying glass icon */}
+            <FaSearch />
           </span>
           <input
             type='text'
@@ -29,23 +33,22 @@ export default function Assignments() {
           />
         </div>
         <div>
-          {" "}
-          {/* Container for buttons to align them to the right */}
           <button
             id='wd-add-assignment-group'
-            className='btn btn-secondary bg-gray ms-2' // Added margin start
+            className='btn btn-secondary bg-gray ms-2'
           >
             + Group
           </button>
-          <button
-            id='wd-add-assignment'
-            className='btn btn-secondary text-white bg-danger ms-2' // Added margin start
-          >
-            + Assignment
-          </button>
+          {currentUser.role === "FACULTY" && (
+            <Link
+              to={`/Kanbas/Courses/${cid}/Assignments/new`}
+              className='btn btn-danger ms-2'
+            >
+              + Assignment
+            </Link>
+          )}
         </div>
       </div>
-
       <div className='border border-1 border-dark'>
         <h5
           id='wd-assignments-title'
@@ -60,46 +63,51 @@ export default function Assignments() {
             <span className='border border-1 border-dark bg-white p-2 rounded-5'>
               40% of Total
             </span>
-            <FaPlus className='ms-2' />
+            {currentUser.role === "FACULTY" && <FaPlus className='ms-2' />}
             <IoEllipsisVertical className='fs-4 ms-2' />
           </span>
         </h5>
-
         <ul
           id='wd-assignment-list'
           className='assignment-list-group list-group rounded-0'
         >
-          {assignments
-            .filter((assignment) => assignment.course === cid)
-            .map((asgn) => (
-              <li className='wd-assignment-list-item p-2 d-flex align-items-center border border-1'>
-                <AssignmentControls />
-                <div className='ms-2'>
-                  <a
-                    className='wd-assignment-link text-decoration-none text-black'
-                    href={`#/Kanbas/Courses/${cid}/Assignments/${asgn._id}`}
-                  >
-                    {asgn.title}
-
-                    <p className='wd-assignment-link mb-0 fs-6'>
-                      <span className='text-danger'>Multiple Modules</span> |{" "}
-                      <b>Not Available until</b> {asgn.availableFrom} |{" "}
-                      {asgn.points}
-                      <br />
-                      <b>Due</b> {asgn.dueDate}
-                    </p>
-                  </a>
-                </div>
-                {/* Icons added here and aligned to the right */}
-                <div className='ms-auto d-flex'>
-                  <GreenCheckmark />
-                  <IoEllipsisVertical className='fs-4' />
-                  {/* Second icon with right margin */}
-                </div>
-              </li>
-            ))}
+          {assignments.map((asgn: any) => (
+            <li
+              key={asgn._id}
+              className='wd-assignment-list-item p-2 d-flex align-items-center border border-1'
+            >
+              <AssignmentControls />
+              <div className='ms-2'>
+                <Link
+                  to={`/Kanbas/Courses/${cid}/Assignments/${asgn._id}`}
+                  className='wd-assignment-link text-decoration-none text-black'
+                >
+                  {asgn.title}
+                  <p className='wd-assignment-link mb-0 fs-6'>
+                    <span className='text-danger'>Multiple Modules</span> |{" "}
+                    <b>Not Available until</b> {asgn.availableFrom} |{" "}
+                    {asgn.points}
+                    <br />
+                    <b>Due</b> {asgn.dueDate}
+                  </p>
+                </Link>
+              </div>
+              <div className='ms-auto d-flex'>
+                <GreenCheckmark />
+                <IoEllipsisVertical className='fs-4' />
+                {currentUser.role === "FACULTY" && (
+                  <FaTrash
+                    className='fs-4 text-danger'
+                    onClick={() => dispatch(deleteAssignment(asgn._id))}
+                  />
+                )}
+              </div>
+            </li>
+          ))}
         </ul>
       </div>
     </div>
   );
 }
+
+export default Assignments;
