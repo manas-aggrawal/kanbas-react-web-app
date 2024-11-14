@@ -1,39 +1,86 @@
-import { SetStateAction, useState } from "react";
-import { useParams } from "react-router";
-import * as db from "../../Database";
+import React, { useState, useEffect } from "react";
+import { useParams, useNavigate } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { addAssignment, updateAssignment } from "./reducer";
 
 export default function AssignmentEditor() {
-  // State to store the selected option
+  const { cid, aid } = useParams();
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+
+  const assignment = useSelector((state: any) =>
+    state.assignmentReducer.assignments.find((a: any) => a._id === aid)
+  );
+
+  const [title, setTitle] = useState(assignment?.title || "");
+  const [description, setDescription] = useState(assignment?.description || "");
+  const [points, setPoints] = useState(assignment?.points || 100);
+  const [dueDate, setDueDate] = useState(assignment?.dueDate || "");
+  const [availableFrom, setAvailableFrom] = useState(
+    assignment?.availableFrom || ""
+  );
+  const [availableUntil, setAvailableUntil] = useState(
+    assignment?.availableUntil || ""
+  );
   const [selectedOption, setSelectedOption] = useState("");
 
-  // Function to handle selection changes
-  const handleSubmissionTypeChange = (event: {
-    target: { value: SetStateAction<string> };
-  }) => {
+  useEffect(() => {
+    if (assignment) {
+      setTitle(assignment.title);
+      setDescription(assignment.description);
+      setPoints(assignment.points);
+      setDueDate(assignment.dueDate);
+      setAvailableFrom(assignment.availableFrom);
+      setAvailableUntil(assignment.availableUntil);
+    }
+  }, [assignment]);
+
+  const handleSubmissionTypeChange = (
+    event: React.ChangeEvent<HTMLSelectElement>
+  ) => {
     setSelectedOption(event.target.value);
   };
-  const { cid, aid } = useParams();
-  const assignments = db.assignments;
-  const assignment = assignments.find((a) => a._id === aid);
+
+  const handleSave = () => {
+    const updatedAssignment = {
+      _id: assignment?._id || new Date().getTime().toString(),
+      title,
+      description,
+      points,
+      dueDate,
+      availableFrom,
+      availableUntil,
+      course: cid,
+    };
+
+    if (assignment) {
+      dispatch(updateAssignment(updatedAssignment));
+    } else {
+      dispatch(addAssignment(updatedAssignment));
+    }
+    navigate(`/Kanbas/Courses/${cid}/Assignments`);
+  };
 
   return (
     <div id='wd-assignments-editor' className='form-check ms-5 ps-5 me-3'>
       <h3>
         <label htmlFor='wd-name'>Assignment Name</label>
       </h3>
-
       <input
         id='wd-name'
         className='form-control'
-        defaultValue={`${assignment?.title}`}
+        value={title}
+        onChange={(e) => setTitle(e.target.value)}
       />
       <br />
       <br />
-      <textarea id='wd-description' className='form-control'>
-        {assignment?.description}
-      </textarea>
+      <textarea
+        id='wd-description'
+        className='form-control'
+        value={description}
+        onChange={(e) => setDescription(e.target.value)}
+      />
       <br />
-
       <div className='container mt-5'>
         {/* Points */}
         <div className='row'>
@@ -50,11 +97,11 @@ export default function AssignmentEditor() {
               id='wd-points'
               className='form-control'
               type='number'
-              defaultValue={`${assignment?.points}`}
+              value={points}
+              onChange={(e) => setPoints(Number(e.target.value))}
             />
           </div>
         </div>
-
         <div className='row mt-4'>
           <div className='col-md-3'>
             <label
@@ -173,7 +220,6 @@ export default function AssignmentEditor() {
             </div>
           </div>
         </div>
-
         <div className='row mt-4'>
           <div className='col-md-3'>
             <label className='col-form-label text-end d-block'>Assign</label>
@@ -192,7 +238,6 @@ export default function AssignmentEditor() {
                   <option value='everyone'>Manas Aggrawal</option>
                 </select>
               </div>
-
               <div className='mb-3'>
                 <label htmlFor='wd-due-date'>Due date</label>
                 <input
@@ -200,10 +245,10 @@ export default function AssignmentEditor() {
                   name='due-date'
                   id='wd-due-date'
                   className='form-control'
-                  defaultValue={`${assignment?.dueDate}`}
+                  value={dueDate}
+                  onChange={(e) => setDueDate(e.target.value)}
                 />
               </div>
-
               <div className='row'>
                 <div className='col-md-6 mb-3'>
                   <label htmlFor='wd-available-from' className='form-label'>
@@ -214,7 +259,8 @@ export default function AssignmentEditor() {
                     name='available-from'
                     id='wd-available-from'
                     className='form-control'
-                    defaultValue={`${assignment?.availableFrom}`}
+                    value={availableFrom}
+                    onChange={(e) => setAvailableFrom(e.target.value)}
                   />
                 </div>
                 <div className='col-md-6 mb-3'>
@@ -226,7 +272,8 @@ export default function AssignmentEditor() {
                     name='available-until'
                     id='wd-available-until'
                     className='form-control'
-                    defaultValue={`${assignment?.availableUntil}`}
+                    value={availableUntil}
+                    onChange={(e) => setAvailableUntil(e.target.value)}
                   />
                 </div>
               </div>
@@ -236,14 +283,15 @@ export default function AssignmentEditor() {
       </div>
       <hr />
       <div className='float-end'>
-        <a href={`#/Kanbas/Courses/${cid}/Assignments`}>
-          <button className='bg-gray btn btn-secondary me-2 border-1'>
-            Cancel
-          </button>
-        </a>
-        <a href={`#/Kanbas/Courses/${cid}/Assignments`}>
-          <button className='bg-danger text-white btn'>Save</button>
-        </a>
+        <button
+          className='bg-gray btn btn-secondary me-2 border-1'
+          onClick={() => navigate(`/Kanbas/Courses/${cid}/Assignments`)}
+        >
+          Cancel
+        </button>
+        <button className='bg-danger text-white btn' onClick={handleSave}>
+          Save
+        </button>
       </div>
     </div>
   );
