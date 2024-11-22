@@ -12,14 +12,12 @@ body * {
   }
 }
 
-/* Courses navigaton */
 .list-group.wd > .list-group-item.active {
   color: black;
   background-color: white;
   border-left: 3px solid black !important;
 }
 
-/* Course modules */
 .btn-secondary {
   --bs-btn-color: #000 !important;
   --bs-btn-bg: #c7cdd1 !important;
@@ -34,67 +32,4 @@ body * {
 }
 .wd-lesson {
   border-left: 3px solid green !important;
-}
-.wd-lesson:hover {
-  background-color: lightblue;
-}
-
-#wd-add-assignment-group {
-  align-items: end;
-}
-
-.assignment-list-group {
-  border-left: 3px solid green !important;
-  margin: 0; /* Remove margin */
-  padding: 0; /* Remove padding */
-}
-
-.wd-assignment-list-item:hover {
-  background-color: lightblue;
-}
-
-/* Kanbas navigation icon swirl */
-.custom-toggler {
-  width: 50px; /* Adjust size as needed */
-  height: 50px; /* Adjust size as needed */
-  filter: invert(15%) sepia(95%) saturate(6932%) hue-rotate(0deg)
-    brightness(97%) contrast(112%); /* This makes the image red */
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-
-.custom-toggler:hover {
-  animation: swirl 0.5s ease-in-out;
-}
-
-@keyframes swirl {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-.toggle-menu-img {
-  height: 50px;
-  width: 50px;
-}
-
-.offcanvas-body .list-group-item:hover {
-  text-decoration: underline;
-}
-/* Define your own CSS to hide and show the offcanvas */
-.offcanvas-hidden {
-  display: none;
-}
-.offcanvas-visible {
-  display: block; /* Or use flex depending on layout */
-}
-
-/* This thing keeps the size of the images same throughout the cards */
-.card-img-top {
-  width: 100%; /* Make sure it fills the card width */
-  height: 200px; /* Set a fixed height */
-  object-fit: cover; /* Ensure the image covers the area without stretching */
 }
