@@ -65,7 +65,7 @@ export default function AssignmentEditor() {
       navigate(`/Kanbas/Courses/${cid}/Assignments`);
     } else {
       // dispatch(updateAssignment(newAssignment));
-      await assignmentsClient.updateAssignment(newAssignment);
+      await assignmentsClient.updateAssignment(newAssignment, cid ?? "");
       navigate(`/Kanbas/Courses/${cid}/Assignments`);
     }
   };

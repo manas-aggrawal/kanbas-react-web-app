@@ -127,7 +127,7 @@ export default function Dashboard({
           <h2 id='wd-dashboard-published'>
             {isEnrolling
               ? "Published Courses (" + allCourses.length + ")"
-              : "Published Courses (" + courses.length + ")"}
+              : "Published Courses (" + enrollments.length + ")"}
           </h2>
           <button
             className='btn btn-primary'
@@ -175,10 +175,10 @@ export default function Dashboard({
                         {course.description}
                       </p>
                       {/* Check if the user is enrolled in the course */}
-                      {enrollments.some(
+                      {enrollments.find(
                         (enrollment: any) =>
-                          enrollment.user === currentUser._id &&
-                          enrollment.course === course._id
+                          // enrollment.user === currentUser._id &&
+                          enrollment._id === course._id
                       ) ? (
                         <button
                           className='btn btn-danger'
@@ -200,7 +200,7 @@ export default function Dashboard({
                 </div>
               ))
             : // Show only enrolled courses
-              courses.map((course) => (
+              enrollments.map((course) => (
                 <div
                   className='wd-dashboard-course col'
                   key={course._id}
@@ -249,8 +249,7 @@ export default function Dashboard({
                           id='wd-edit-course-click'
                           onClick={(event) => {
                             event.preventDefault();
-                            console.log("Button clicked");
-                            console.log("Current course:", course);
+
                             setCourse(course);
                           }}
                           className='btn btn-warning me-2 float-end'

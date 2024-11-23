@@ -8,6 +8,7 @@ export const signin = async (credentials: any) => {
     `${USERS_API}/signin`,
     credentials
   );
+
   return response.data;
 };
 export const profile = async () => {
@@ -47,6 +48,6 @@ export const createCourse = async (course: any) => {
 
 export const getAllUsers = async () => {
   const { data } = await axiosWithCredentials.get(`${USERS_API}`);
-  // console.log("All Users:", data);
+  
   return data;
 };

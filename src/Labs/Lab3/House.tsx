@@ -12,7 +12,7 @@ export default function House() {
     },
     owners: ["Brett Wilkinson"],
   };
-  console.log(house);
+
   return (
     <div id='wd-house'>
       <h4>House</h4>
