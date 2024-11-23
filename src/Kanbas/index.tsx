@@ -4,7 +4,6 @@ import Dashboard from "./Dashboard/index";
 import Courses from "./Courses/index";
 import AccountNavigation from "./Navigation";
 import "./styles.css";
-import * as db from "./Database";
 import { useEffect, useState } from "react";
 import store from "./store";
 import { Provider, useDispatch, useSelector } from "react-redux";
