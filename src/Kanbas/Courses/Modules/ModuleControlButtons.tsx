@@ -1,6 +1,8 @@
+import { BsPlus } from "react-icons/bs";
+import { FaTrash } from "react-icons/fa";
 import { IoEllipsisVertical } from "react-icons/io5";
 import GreenCheckmark from "./GreenCheckmark";
-import { FaPencil, FaPlus, FaTrash } from "react-icons/fa6";
+import { FaPencil } from "react-icons/fa6";
 import { useSelector } from "react-redux";
 export default function ModuleControlButtons({
   moduleId,
@@ -11,26 +13,26 @@ export default function ModuleControlButtons({
   deleteModule: (moduleId: string) => void;
   editModule: (moduleId: string) => void;
 }) {
-  const currentUser = useSelector(
-    (state: any) => state.accountReducer.currentUser
-  );
+  const { currentUser } = useSelector((state: any) => state.accountReducer);
+  // console.log("Current User: ", currentUser.role);
+  const userRole = currentUser.role;
   return (
     <div className='float-end'>
-      {currentUser.role === "FACULTY" && (
-        <>
-          <FaPencil
-            onClick={() => editModule(moduleId)}
-            className='text-primary me-3'
-          />
-          <FaTrash
-            className='text-danger me-2 mb-1'
-            onClick={() => deleteModule(moduleId)}
-          />
-          <GreenCheckmark />
-          <FaPlus />
-          <IoEllipsisVertical className='fs-4' />
-        </>
+      {userRole === "FACULTY" && (
+        <FaPencil
+          onClick={() => editModule(moduleId)}
+          className='text-primary me-3'
+        />
       )}
+      {userRole === "FACULTY" && (
+        <FaTrash
+          className='text-danger me-2 mb-1'
+          onClick={() => deleteModule(moduleId)}
+        />
+      )}
+      <GreenCheckmark />
+      <BsPlus className='fs-1' />
+      <IoEllipsisVertical className='fs-4' />
     </div>
   );
 }

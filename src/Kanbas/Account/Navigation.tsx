@@ -1,50 +1,56 @@
-// import { useSelector } from "react-redux";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
+
 export default function AccountNavigation() {
-  const { pathname } = useLocation();
-  // const { currentUser } = useSelector((state: any) => state.accountReducer);
-  // const links = currentUser ? ["Profile"] : ["Signin", "Signup"];
+  const { currentUser } = useSelector((state: any) => state.accountReducer);
+  const links = currentUser ? ["Profile"] : ["SignIn", "SignUp"];
+
   return (
-    <div id='wd-account-navigation' className='ps-3'>
-      <Link
-        to={`/Kanbas/Account/Signin`}
-        className={`text-decoration-none ${
-          pathname.includes("Signin")
-            ? "text-black border-start border-dark border-3 ps-1 p-2 mb-2 align-items-center"
-            : "text-danger"
-        }`}
-      >
-        {" "}
-        Signin{" "}
-      </Link>{" "}
-      <br />
-      <br />
-      <Link
-        to={`/Kanbas/Account/Signup`}
-        className={`text-decoration-none ${
-          pathname.includes("Signup")
-            ? "text-black border-start border-dark border-3 ps-1 p-2 mb-2 align-items-center"
-            : "text-danger"
-        }`}
-      >
-        {" "}
-        Signup{" "}
-      </Link>{" "}
-      <br />
-      <br />
-      <Link
-        to={`/Kanbas/Account/Profile`}
-        className={`text-decoration-none ${
-          pathname.includes("Profile")
-            ? "text-black border-start border-dark border-3 ps-1 p-2 mb-2 align-items-center"
-            : "text-danger"
-        }`}
-      >
-        {" "}
-        Profile{" "}
-      </Link>{" "}
-      <br />
-      <br />
+    <div id='wd-account-navigation' className='wd list-group fs-5 rounded-0'>
+      {links.includes("SignIn") && (
+        <Link to='SignIn' className='list-group-item active border border-0'>
+          SignIn
+        </Link>
+      )}
+      {links.includes("SignUp") && (
+        <Link
+          to='SignUp'
+          className='list-group-item text-danger border border-0'
+        >
+          SignUp
+        </Link>
+      )}
+      {links.includes("Profile") && (
+        <Link
+          to='Profile'
+          className='list-group-item text-danger border border-0'
+        >
+          Profile
+        </Link>
+      )}
     </div>
   );
 }
+
+// import { Link } from "react-router-dom";
+// import { useSelector } from "react-redux";
+// export default function AccountNavigation() {
+//   const { currentUser } = useSelector((state: any) => state.accountReducer);
+//   const links = currentUser ? ["Profile"] : ["SignIn", "Signp"];
+//   return (
+//     <div id="wd-account-navigation" className="wd list-group fs-5 rounded-0">
+//       <Link to="SignIn" className="list-group-item active border border-0">
+//         SignIn
+//       </Link>
+//       <Link to="SignUp" className="list-group-item text-danger border border-0">
+//         SignUp
+//       </Link>
+//       <Link
+//         to="Profile"
+//         className="list-group-item text-danger border border-0"
+//       >
+//         Profile
+//       </Link>
+//     </div>
+//   );
+// }
