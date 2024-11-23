@@ -157,8 +157,8 @@ export default function Dashboard({
                     > */}
                     <img
                       src={
-                        course.img
-                          ? require(`/public/images/${course.img}`)
+                        course.image
+                          ? require(`../../../public/images/${course.image}`)
                           : "https://miro.medium.com/v2/1*K0a7xINk0RM5gfXGSN68cw.png"
                       }
                       width='100%'
@@ -209,8 +209,8 @@ export default function Dashboard({
                   <div className='card rounded-3 overflow-hidden'>
                     <img
                       src={
-                        course.img
-                          ? require(`../../../public/images/${course.img}`)
+                        course.image
+                          ? require(`../../../public/images/${course.image}`)
                           : "https://miro.medium.com/v2/1*K0a7xINk0RM5gfXGSN68cw.png"
                       }
                       width='100%'
