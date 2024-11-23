@@ -1,12 +1,7 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Link, useParams } from "react-router-dom";
-import {
-  // setAssignments,
-  deleteAssignment,
-  // setAssignment,
-  addAssignment,
-} from "./reducer";
+import { setAssignments, deleteAssignment, addAssignment } from "./reducer";
 import * as assignmentClient from "./client";
 import { FaPlus, FaSearch, FaTrash } from "react-icons/fa";
 import { BsGripVertical } from "react-icons/bs";
@@ -17,23 +12,20 @@ import AssignmentControls from "./AssignmentControls";
 export default function Assignments() {
   const { cid } = useParams();
   const { currentUser } = useSelector((state: any) => state.accountReducer);
-  const assignments = useSelector((state: any) =>
-    state.assignmentReducer ? state.assignmentReducer.assignments : []
-  );
+  const [assignments, setStateAssignments] = useState([]);
+  // const assignments = useSelector((state: any) =>
+  //   state.assignmentReducer ? state.assignmentReducer.assignments : []
+  // );
   const dispatch = useDispatch();
 
   useEffect(() => {
     const fetchAllAssignments = async () => {
-      console.log("fetchAllAssignments");
       try {
-        console.log("fetchAllAssignments-try block");
         const fetchedAssignments =
           await assignmentClient.fetchAssignmentsForCourse(cid as string);
-        console.log(
-          "fetchAllAssignments-after axios call: ",
-          fetchedAssignments
-        );
-        dispatch(addAssignment(fetchedAssignments));
+
+        setStateAssignments(fetchedAssignments);
+        dispatch(setAssignments(fetchedAssignments));
       } catch (error) {
         console.error("Error fetching assignments:", error);
       }
@@ -43,8 +35,12 @@ export default function Assignments() {
 
   const removeAssignment = async (assignmentId: string) => {
     try {
-      await assignmentClient.deleteAssignment(assignmentId, cid ?? "");
-      dispatch(deleteAssignment(assignmentId));
+      const assn = await assignmentClient.deleteAssignment(
+        cid ?? "",
+        assignmentId
+      );
+      setStateAssignments(assn);
+      dispatch(setAssignments(assn));
     } catch (error) {
       console.error("Error deleting assignment:", error);
     }
@@ -121,7 +117,7 @@ export default function Assignments() {
               key={asgn._id}
               className='wd-assignment-list-item p-2 d-flex align-items-center border border-1'
             >
-              <AssignmentControls setAssignment={addingAssignment} />
+              <AssignmentControls />
               <div className='ms-2'>
                 <Link
                   to={`/Kanbas/Courses/${cid}/Assignments/${asgn._id}`}
@@ -143,7 +139,7 @@ export default function Assignments() {
                 {currentUser.role === "FACULTY" && (
                   <FaTrash
                     className='fs-4 text-danger'
-                    onClick={() => dispatch(deleteAssignment(asgn._id))}
+                    onClick={() => removeAssignment(asgn._id)}
                   />
                 )}
               </div>

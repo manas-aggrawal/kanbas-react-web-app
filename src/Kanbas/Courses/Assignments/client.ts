@@ -10,9 +10,12 @@ export const updateAssignment = async (assignment: any, courseId: string) => {
   return data;
 };
 
-export const deleteAssignment = async (id: string, courseId: string) => {
+export const deleteAssignment = async (
+  courseId: string,
+  assignmentId: string
+) => {
   const { data } = await axios.delete(
-    `${COURSES_API}/${courseId}/assignments/${id}`
+    `${COURSES_API}/${courseId}/assignments/${assignmentId}`
   );
   return data;
 };
