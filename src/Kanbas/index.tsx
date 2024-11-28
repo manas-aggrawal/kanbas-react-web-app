@@ -39,7 +39,7 @@ const Kanbas = () => {
     description: string;
   }) => {
     const newCourse = await userClient.createCourse(course);
-    console.log("adding new course: ", newCourse);
+
     const updatedCourses = [...courses, newCourse];
     dispatch(setCourses(updatedCourses));
     setCurrCourses(updatedCourses);
@@ -62,8 +62,7 @@ const Kanbas = () => {
 
   const updateCourse = async (course: any) => {
     const updatedCourse = await courseClient.updateCourse(course);
-    console.log("sent course: ", course);
-    console.log("updated course: ", updatedCourse);
+
     const updatedCourses = courses.map((c: { _id: any }) =>
       c._id === course._id ? updatedCourse : c
     );

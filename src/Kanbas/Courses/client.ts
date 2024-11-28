@@ -18,7 +18,6 @@ export const updateCourse = async (updatedCourse: any) => {
     updatedCourse
   );
 
-  console.log("updated Course from axios: ", data);
   return data;
 };
 
