@@ -5,20 +5,19 @@ import Courses from "./Courses/index";
 import AccountNavigation from "./Navigation";
 import "./styles.css";
 import { useEffect, useState } from "react";
-import store from "./store";
-import { Provider, useDispatch, useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import ProtectedRoute from "./Account/ProtectedRoute";
 import Session from "./Account/Session";
 import * as courseClient from "./Courses/client";
 import * as userClient from "./Account/client";
-import { fetchAllCourses } from "./Courses/client";
+import { setCourses, setEnrollments } from "./Dashboard/reducer";
 
 const Kanbas = () => {
-  const [courses, setCourses] = useState<any[]>([]);
-  const [allCourses, setAllCourses] = useState<any[]>([]);
-  const [enrollments, setEnrollments] = useState<any[]>([]);
-
   const { currentUser } = useSelector((state: any) => state.accountReducer);
+  const [courses, setCurrCourses] = useState([] as any[]);
+  const [enrollments, setCurrEnrollments] = useState([] as any[]);
+
+  const dispatch = useDispatch();
 
   const fetchCourses = async () => {
     let courses = [];
@@ -27,66 +26,54 @@ const Kanbas = () => {
     } catch (error) {
       console.error(error);
     }
-    setCourses(courses);
-  };
-
-  const getAllCourses = async () => {
-    try {
-      const fetchedCourses = await fetchAllCourses();
-      setAllCourses(fetchedCourses);
-    } catch (error) {
-      console.error("Error fetching courses:", error);
-    }
+    dispatch(setCourses(courses));
+    setCurrCourses(courses);
   };
 
   useEffect(() => {
     fetchCourses();
-    getAllCourses();
   }, [currentUser]);
 
-  const [course, setCourse] = useState<any>({
-    _id: "1234",
-    name: "New Course",
-    number: "New Number",
-    startDate: "2023-09-10",
-    endDate: "2023-12-15",
-    description: "New Description",
-  });
-
-  const addNewCourse = async () => {
+  const addNewCourse = async (course: {
+    name: string;
+    description: string;
+  }) => {
     const newCourse = await userClient.createCourse(course);
-    setCourses([...courses, newCourse]);
-    setAllCourses([...allCourses, newCourse]);
+    console.log("adding new course: ", newCourse);
+    const updatedCourses = [...courses, newCourse];
+    dispatch(setCourses(updatedCourses));
+    setCurrCourses(updatedCourses);
   };
 
   const deleteCourse = async (courseId: any) => {
-    const status = await courseClient.deleteCourse(courseId);
-    setCourses(courses.filter((course) => course._id !== courseId));
-    setAllCourses(allCourses.filter((course) => course._id !== courseId));
+    await courseClient.deleteCourse(courseId);
+    const updatedCourses = courses.filter(
+      (course: { _id: any }) => course._id !== courseId
+    );
+    dispatch(setCourses(updatedCourses));
+    setCurrCourses(updatedCourses);
+
+    const updatedEnrollments = enrollments.filter(
+      (enrollment: { course: any }) => enrollment.course !== courseId
+    );
+    dispatch(setEnrollments(updatedEnrollments));
+    setCurrEnrollments(updatedEnrollments);
   };
 
-  const updateCourse = async () => {
+  const updateCourse = async (course: any) => {
     const updatedCourse = await courseClient.updateCourse(course);
-
-    setEnrollments(
-      enrollments.map((c: { _id: any }) => {
-        if (c._id === course._id) {
-          return updatedCourse;
-        } else {
-          return c;
-        }
-      })
+    console.log("sent course: ", course);
+    console.log("updated course: ", updatedCourse);
+    const updatedCourses = courses.map((c: { _id: any }) =>
+      c._id === course._id ? updatedCourse : c
     );
-
-    setAllCourses(
-      allCourses.map((c) => {
-        if (c._id === course._id) {
-          return updatedCourse;
-        } else {
-          return c;
-        }
-      })
-    );
+    // const updatedEnrollments = enrollments.map((c: { _id: any }) =>
+    //   c._id === course._id ? enrolledCourse : c
+    // );
+    dispatch(setCourses(updatedCourses));
+    // dispatch(setEnrollments(updatedEnrollments));
+    setCurrCourses(updatedCourses);
+    // setCurrEnrollments(updatedEnrollments);
   };
 
   return (
@@ -110,15 +97,13 @@ const Kanbas = () => {
                     element={
                       <ProtectedRoute>
                         <Dashboard
-                          courses={enrollments}
-                          course={course}
-                          setCourse={setCourse}
+                          courses={courses}
+                          setCurrCourses={setCurrCourses}
+                          enrollments={enrollments}
+                          setCurrEnrollments={setCurrEnrollments}
                           addNewCourse={addNewCourse}
                           deleteCourse={deleteCourse}
                           updateCourse={updateCourse}
-                          fetchCourses={fetchCourses}
-                          allCourses={allCourses}
-                          fetchAllCourses={fetchAllCourses}
                         />
                       </ProtectedRoute>
                     }
