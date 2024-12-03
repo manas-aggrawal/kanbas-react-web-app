@@ -66,13 +66,10 @@ const Kanbas = () => {
     const updatedCourses = courses.map((c: { _id: any }) =>
       c._id === course._id ? updatedCourse : c
     );
-    // const updatedEnrollments = enrollments.map((c: { _id: any }) =>
-    //   c._id === course._id ? enrolledCourse : c
-    // );
+
     dispatch(setCourses(updatedCourses));
-    // dispatch(setEnrollments(updatedEnrollments));
+
     setCurrCourses(updatedCourses);
-    // setCurrEnrollments(updatedEnrollments);
   };
 
   return (

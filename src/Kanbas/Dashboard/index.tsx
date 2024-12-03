@@ -47,6 +47,7 @@ export default function Dashboard({
   const isEnrolling = isEnrollingFromStore;
 
   const handleEnroll = async (courseId: string) => {
+    console.log("handle enroll: ", currentUser);
     dispatch(enrollCourse({ userId: currentUser._id, courseId }));
     await enrollmentsClient.enrollUser({
       user: currentUser._id,
