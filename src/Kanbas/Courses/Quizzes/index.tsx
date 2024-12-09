@@ -31,30 +31,30 @@ export default function Quizzes() {
   };
   useEffect(() => {
     fetchQuizzes();
-  }, []);
+  }, [currentUser]);
 
   return (
-    <div id="wd-quizzes" className="m-5">
-      <div id="wd-search-quizzes-box" className="row">
-        <div className="col-8">
-          <div className="search-bar me-2 mb-2 float-start d-flex align-items-center">
-            <CiSearch className="position-relative m-2 fs-4" />
+    <div id='wd-quizzes' className='m-5'>
+      <div id='wd-search-quizzes-box' className='row'>
+        <div className='col-8'>
+          <div className='search-bar me-2 mb-2 float-start d-flex align-items-center'>
+            <CiSearch className='position-relative m-2 fs-4' />
             <input
-              id="wd-search-assignment"
-              className="form-control border-0"
-              placeholder="Search..."
+              id='wd-search-assignment'
+              className='form-control border-0'
+              placeholder='Search...'
             ></input>
           </div>
         </div>
         {currentUser.role === "FACULTY" && (
-          <div className="col-4">
+          <div className='col-4'>
             <Link to={`/Kanbas/Courses/${cid}/Quizzes/@/Edit/Details`}>
               <button
-                id="wd-add-quizzes"
-                className="btn btn-lg btn-danger me-1 float-end"
+                id='wd-add-quizzes'
+                className='btn btn-lg btn-danger me-1 float-end'
               >
                 <FaPlus
-                  className="position-relative me-2"
+                  className='position-relative me-2'
                   style={{ bottom: "1px" }}
                 />
                 Quiz
@@ -65,17 +65,17 @@ export default function Quizzes() {
       </div>
       <br />
       <br />
-      <ul className="list-group rounded-0">
-        <li className="list-group-item p-0 fs-5 border-gray">
-          <div className="wd-title p-3 ps-3 bg-secondary">
+      <ul className='list-group rounded-0'>
+        <li className='list-group-item p-0 fs-5 border-gray'>
+          <div className='wd-title p-3 ps-3 bg-secondary'>
             {currentUser.role === "FACULTY" && (
-              <BsGripVertical className="me-2 fs-3" />
+              <BsGripVertical className='me-2 fs-3' />
             )}
             QUIZZES
             <QuizGroupControlButtons />
           </div>
         </li>
-        <ul id="wd-quizzes-list" className="list-group rounded-0">
+        <ul id='wd-quizzes-list' className='list-group rounded-0'>
           {(currentUser.role === "FACULTY" || currentUser.role === "ADMIN") &&
             quizzes.map(
               (quiz: {
@@ -89,21 +89,21 @@ export default function Quizzes() {
                 questions: any[];
                 published: boolean;
               }) => (
-                <li className="wd-quiz-list-item list-group-item p-3 ps-1 fs-5">
-                  <div className="row align-items-center">
-                    <div className="col-1">
-                      <BsGripVertical className="me-2 fs-3" />
-                      <RxRocket className="fs-5 text-success" />
+                <li className='wd-quiz-list-item list-group-item p-3 ps-1 fs-5'>
+                  <div className='row align-items-center'>
+                    <div className='col-1'>
+                      <BsGripVertical className='me-2 fs-3' />
+                      <RxRocket className='fs-5 text-success' />
                     </div>
-                    <div className="col-9">
+                    <div className='col-9'>
                       <a
-                        className="wd-quiz-link text-decoration-none text-dark h5"
+                        className='wd-quiz-link text-decoration-none text-dark h5'
                         href={`#/Kanbas/Courses/${cid}/Quizzes/${quiz._id}`}
                       >
                         {quiz.title}
                       </a>
                       <br />
-                      <span className="custom-gray1 fw-bold">
+                      <span className='custom-gray1 fw-bold'>
                         {quiz.availableFrom &&
                           new Date(quiz.availableFrom) > new Date() &&
                           "Not available until"}
@@ -116,8 +116,8 @@ export default function Quizzes() {
                           "Available since"}
                         &nbsp;
                       </span>
-                      <span className="">
-                        <span className="custom-gray1">
+                      <span className=''>
+                        <span className='custom-gray1'>
                           {quiz.availableFrom &&
                             !(new Date(quiz.availableUntil) < new Date()) &&
                             new Date(quiz.availableFrom).toLocaleDateString(
@@ -150,7 +150,7 @@ export default function Quizzes() {
                         </span>
                       </span>
                     </div>
-                    <div className="col-2">
+                    <div className='col-2'>
                       {cid && <QuizControlButtons quiz={quiz} cid={cid} />}
                     </div>
                   </div>
@@ -172,20 +172,20 @@ export default function Quizzes() {
                 attempts: any[];
                 dueDate: Date;
               }) => (
-                <li className="wd-quiz-list-item list-group-item p-3 ps-3 fs-5">
-                  <div className="row align-items-center">
-                    <div className="col-1 ms-2" style={{ width: "4%" }}>
-                      <RxRocket className="fs-5" />
+                <li className='wd-quiz-list-item list-group-item p-3 ps-3 fs-5'>
+                  <div className='row align-items-center'>
+                    <div className='col-1 ms-2' style={{ width: "4%" }}>
+                      <RxRocket className='fs-5' />
                     </div>
-                    <div className="col-11">
+                    <div className='col-11'>
                       <a
-                        className="wd-quiz-link text-decoration-none text-dark h5"
+                        className='wd-quiz-link text-decoration-none text-dark h5'
                         href={`#/Kanbas/Courses/${cid}/Quizzes/${quiz._id}`}
                       >
                         {quiz.title}
                       </a>
                       <br />
-                      <span className="custom-gray1 fw-bold">
+                      <span className='custom-gray1 fw-bold'>
                         {quiz.availableFrom &&
                           new Date(quiz.availableFrom) > new Date() &&
                           "Not available until"}
@@ -198,8 +198,8 @@ export default function Quizzes() {
                           "Available"}
                         &nbsp;
                       </span>
-                      <span className="">
-                        <span className="custom-gray1">
+                      <span className=''>
+                        <span className='custom-gray1'>
                           {quiz.availableFrom &&
                             !(new Date(quiz.availableUntil) < new Date()) &&
                             new Date(quiz.availableFrom).toLocaleDateString(
