@@ -6,11 +6,13 @@ import Assignments from "./Assignments";
 import AssignmentEditor from "./Assignments/Editor";
 import { FaAlignJustify } from "react-icons/fa6";
 import Users from "../Account/Users";
-import Quizzes from "../Quizzes";
-import QuizDetails from "../Quizzes/QuizDetails";
-import QuizEditor from "../Quizzes/QuizEditor";
-import QuizPreview from "../Quizzes/QuizPreview";
-import QuestionEditor from "../Quizzes/QuestionEditor";
+import Quizzes from "./Quizzes";
+// import Attempt from "./Quizzes/Attempt";
+import QuizDetails from "./Quizzes/QuizDetails";
+import QuizEditor from "./Quizzes/QuizEditor";
+import QuizPreview from "./Quizzes/QuizPreview";
+import QuizReview from "./Quizzes/QuizReview";
+// import TakeQuiz from "./Quizzes/TakeQuiz";
 
 export default function Courses({ courses }: { courses: any[] }) {
   const { cid } = useParams();
@@ -39,23 +41,35 @@ export default function Courses({ courses }: { courses: any[] }) {
             <Route path='Assignments' element={<Assignments />} />
             <Route path='Assignments/:aid' element={<AssignmentEditor />} />
             <Route path='People' element={<Users />} />
-            <Route path="Quizzes" element={<Quizzes />} />
+            {/* <Route path='Quizzes' element={<Quizzes />} />
+            <Route path='Quizzes/:qid' element={<QuizDetails />} />
+            <Route path='Quizzes/:qid/editor' element={<QuizEditor />} />
+            <Route path='Quizzes/:qid/start' element={<TakeQuiz />} />
             <Route
-              path="Quizzes/Quiz Details/:quizId"
-              element={<QuizDetails />}
+              path='Quizzes/:qid/attempt/:attemptNumber'
+              element={<Attempt />} */}
+            {/* /> */}
+
+            <Route path='Quizzes' element={<Quizzes />} />
+            <Route path='Quizzes/:qid' element={<QuizDetails />} />
+            <Route
+              path='Quizzes/:qid/Edit/*'
+              element={
+                // <ProtectedRouteQuizEditor>
+                <QuizEditor />
+                // </ProtectedRouteQuizEditor>
+              }
             />
             <Route
-              path="Quizzes/Quiz Editor/:quizId/*"
-              element={<QuizEditor />}
+              path='Quizzes/:qid/Preview'
+              element={
+                // <ProtectedRouteQuizEditor>
+                <QuizPreview />
+                // </ProtectedRouteQuizEditor>
+              }
             />
-            <Route
-              path="Quizzes/Question Editor/:quizId/num/:questionNum/*"
-              element={<QuestionEditor />}
-            />
-            <Route
-              path="Quizzes/Quiz Preview/:quizId"
-              element={<QuizPreview />}
-            />
+            <Route path='Quizzes/:qid/Review' element={<QuizReview />} />
+            <Route path='Quizzes/:qid/Attempt' element={<QuizPreview />} />
           </Routes>
         </div>
       </div>
