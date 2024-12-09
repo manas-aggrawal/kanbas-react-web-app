@@ -90,12 +90,9 @@ export default function QuizPreview() {
       if (
         question.choices.some((choice) => choice.correct && choice.selected)
       ) {
-        console.log("Adding points", question.points);
         totalPoints += question.points;
       }
     });
-
-    console.log("totalPoints", totalPoints);
 
     quiz.questions.forEach((question: any) => {
       if (
@@ -109,8 +106,6 @@ export default function QuizPreview() {
         totalPoints += question.points;
       }
     });
-
-    console.log("totalPoints 2", totalPoints);
 
     const score = totalPoints;
 
@@ -127,7 +122,6 @@ export default function QuizPreview() {
               choice.answer.toLowerCase() ===
               question.currentAnswer.toLowerCase()
           );
-          console.log("selectedChoice", selectedChoice);
         }
 
         return {
@@ -138,8 +132,6 @@ export default function QuizPreview() {
         };
       }),
     };
-
-    console.log("attemptData", attemptData);
 
     try {
       const response = await quizzesClient.createAttempt(
@@ -152,8 +144,6 @@ export default function QuizPreview() {
       console.error("Error saving attempt:", error);
     }
   };
-
-  console.log("quiz", quiz);
 
   return (
     <div className='col col-lg-8 align-items-center justify-content-center ms-auto me-auto'>
