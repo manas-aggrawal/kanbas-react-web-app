@@ -1,460 +1,534 @@
-// QuizDetails.tsx
-import React, { useEffect, useState } from "react";
-import { useParams, useNavigate, Link } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
-import * as quizzesClient from "./client"; // Ensure this includes getLatestAttemptForQuiz
-import * as coursesClient from "../client"; // If needed
-import { FaPencil } from "react-icons/fa6";
-import { setQuizzes } from "./reducer";
+import { FaPencilAlt } from "react-icons/fa";
+import { useNavigate, useParams } from "react-router-dom";
+import { useSelector } from "react-redux";
+import * as quizClient from "./client";
+import React, { useState, useEffect } from "react";
+import AnswerTypeElement from "./answerTypeElement";
+import MarkedAnswerFillInTheBlanks from "./MarkedAnswerFillInTheBlanks";
 
-interface Quiz {
-  _id: string;
-  title: string;
-  quizType: string;
-  points: number;
-  assignmentGroup: string;
-  shuffleAnswers: boolean;
-  timeLimit: number;
-  allowMultipleAttempts: boolean;
-  maxAttempts: number;
-  showCorrectAnswers: boolean;
-  accessCode: string;
-  oneQuestionAtATime: boolean;
-  webcam: boolean;
-  lockQuestions: boolean;
-  dueDate: string | null;
-  availableFrom: string | null;
-  availableUntil: string | null;
-  // Add other quiz properties as needed
-}
-
-interface User {
-  _id: string;
-  role: "STUDENT" | "FACULTY" | "ADMIN";
-  // Add other user properties as needed
-}
-
-interface Attempt {
-  lastAttempt: string | number | Date;
-  _id: string;
-  quizId: string;
-  userId: string;
-  attemptCount: number;
-  score: number;
-  completedAt: string;
-  // Add other attempt properties as needed
-}
-
-interface RootState {
-  quizzesReducer: {
-    quizzes: Quiz[];
-  };
-  accountReducer: {
-    currentUser: User | null;
-  };
-}
-
-const QuizDetails: React.FC = () => {
-  const { cid, qid } = useParams<{ cid: string; qid: string }>();
+export default function QuizDetails() {
+  const { cid, qid } = useParams();
   const navigate = useNavigate();
-  const { currentUser } = useSelector(
-    (state: RootState) => state.accountReducer
-  );
-  const dispatch = useDispatch();
-
-  const defaultQuiz = {
+  const { quizzes } = useSelector((state: any) => state.quizzesReducer);
+  // const quiz = quizzes.find((q: any) => q._id === qid);
+  const [quiz, setQuiz] = useState<any>({
+    title: "Untitled Quiz",
     course: cid,
-    questions: [],
-    maxAttempts: 1,
-    title: "Quiz Title",
     description: "",
     quizType: "Graded Quiz",
-    assignmentGroup: "Quizzes",
-    shuffleAnswers: true,
-    timeLimit: 20,
-    points: 0,
-    allowMultipleAttempts: false,
-    assignTo: "Everyone",
-    dueDate: "",
-    availableFrom: "",
-    availableUntil: "",
-    showCorrectAnswers: "Immediately",
-    accessCode: "",
-    oneQuestionAtATime: true,
-    webcam: false,
-    lockQuestions: false,
+    assignmentGroup: "QUIZZES",
+    settings: {
+      shuffleAnswers: true,
+      timeLimit: 20,
+      multipleAttempts: {
+        enabled: false,
+        attemptsAllowed: 1,
+      },
+      showCorrectAnswers: {
+        enabled: true,
+        timing: "",
+      },
+      accessCode: "",
+      oneQuestionAtATime: true,
+      webcamRequired: false,
+      lockQuestionsAfterAnswering: false,
+    },
+    dates: {
+      available: new Date().toISOString(),
+      due: new Date().toISOString(),
+      until: new Date().toISOString(),
+    },
+    isPublished: false,
+  });
+  const { currentUser } = useSelector((state: any) => state.accountReducer);
+
+  const [attempts, setAttempts] = useState<any[]>([]);
+  const [latestAttempt, setLatestAttempt] = useState<any | null>(null);
+  const [markedAnswers, setMarkedAnswers] = useState<any[]>([]);
+
+  const fetchAttempts = async () => {
+    if (currentUser.role === "STUDENT") {
+      const fetchedAttempts = await quizClient.findAttemptsForQuizByUser(
+        qid,
+        currentUser._id
+      );
+      setAttempts(fetchedAttempts);
+
+      if (fetchedAttempts.length > 0) {
+        // Reduce fetched attempts to find the latest one
+        const latest = fetchedAttempts.reduce((prev: any, current: any) => {
+          return new Date(current.submittedAt) > new Date(prev.submittedAt)
+            ? current
+            : prev;
+        }, fetchedAttempts[0]); // Initialize with the first attempt
+
+        setLatestAttempt(latest); // Update the state with the latest attempt
+      } else {
+        setLatestAttempt(null); // Clear the latest attempt if no attempts are found
+      }
+    }
   };
-
-  // Existing state for user attempts
-  const [userAttempts, setUserAttempts] = useState<number | null>(null);
-  const [loadingAttempts, setLoadingAttempts] = useState<boolean>(true);
-  const [error, setError] = useState<string | null>(null);
-  // const [quiz, setQuiz] = useState<Quiz>(initialQuiz);
-
-  // New state for the latest attempt
-  const [latestAttempt, setLatestAttempt] = useState<Attempt | null>(null);
-  const [loadingLatestAttempt, setLoadingLatestAttempt] =
-    useState<boolean>(true);
-  const [latestAttemptError, setLatestAttemptError] = useState<string | null>(
-    null
-  );
 
   const fetchQuiz = async () => {
-    try {
-      const returnedQuiz = await coursesClient.getQuizById(
-        cid as string,
-        qid as string
-      );
-      setQuiz(returnedQuiz);
-    } catch (err: any) {
-      console.error("Error fetching quiz:", err);
+    if (qid) {
+      // const Quiz = await quizClient.getQuizById(latestAttempt.quiz);
+      const Quiz = await quizClient.getQuizById(qid);
+      console.log("🚀 ~ fetchQuiz ~ Quiz:", Quiz);
+
+      setQuiz({ ...Quiz });
     }
   };
   useEffect(() => {
+    // if (qid && currentUser._id) {
+    //   // Ensure IDs are available
+    //   fetchAttempts();
+    // }
+    // questionAndAnswer();
     fetchQuiz();
-  }, []);
+  }, [currentUser]);
 
-  const [this_quiz, setQuiz] = useState(defaultQuiz);
+  // useEffect(() => {
+  //   questionAndAnswer();
+  //   fetchQuiz();
+  // }, [quiz, latestAttempt]);
 
-  useEffect(() => {
-    const fetchUserAttempts = async () => {
-      if (currentUser && currentUser._id && qid && cid) {
-        try {
-          // Fetch the number of attempts the user has made
-          const attemptData = await quizzesClient.getUserQuizAttempts(cid, qid);
-          setUserAttempts(attemptData.attemptCount);
-        } catch (err: any) {
-          console.error("Error fetching user attempts:", err);
-          setError("Failed to fetch your quiz attempts.");
-        } finally {
-          setLoadingAttempts(false);
+  // useEffect(() => {
+  //   console.log("markedasnwer:", markedAnswers);
+  // }, [markedAnswers]);
+  function calculateTotalPoints(questions: any[]): number {
+    if (questions && questions.length > 0) {
+      return questions.reduce((total, question) => {
+        const points = Number(question.points);
+        if (isNaN(points)) {
+          throw new Error(
+            `Invalid points value in question: ${question.title}`
+          );
         }
-      } else {
-        setLoadingAttempts(false);
-      }
-    };
-
-    const fetchLatestAttempt = async () => {
-      if (currentUser && currentUser._id && qid) {
-        try {
-          const latest = await quizzesClient.getLatestAttemptForQuiz(qid);
-          setLatestAttempt(latest);
-        } catch (err: any) {
-          console.error("Error fetching latest attempt:", err);
-          setLatestAttemptError("No prior attempts.");
-        } finally {
-          setLoadingLatestAttempt(false);
-        }
-      } else {
-        setLoadingLatestAttempt(false);
-      }
-    };
-
-    if (currentUser && this_quiz) {
-      fetchUserAttempts();
-      fetchLatestAttempt();
+        return total + points;
+      }, 0);
     }
-  }, [qid, currentUser, this_quiz]);
-
-  const handleBeginQuiz = async () => {
-    if (!currentUser || !currentUser._id) {
-      alert("You must be logged in to attempt the quiz.");
-      return;
-    }
-
-    if (!this_quiz) {
-      alert("Quiz not found.");
-      return;
-    }
-
-    // Check if multiple attempts are allowed
-    if (!this_quiz.allowMultipleAttempts) {
-      // If multipleAttempts is false, allow only one attempt
-      if (userAttempts && userAttempts >= 1) {
-        alert("You have already attempted this quiz.");
-        return;
-      }
-    } else {
-      // If multipleAttempts is true, check against maxAttempts
-      if (userAttempts !== null && userAttempts >= this_quiz.maxAttempts) {
-        alert(
-          `You have reached the maximum of ${this_quiz.maxAttempts} attempts for this quiz.`
+    return 0;
+  }
+  //get the actual answwers and latest response and makes a consolidated object
+  function questionAndAnswer() {
+    if (quiz && latestAttempt) {
+      console.log("loading quesstion and answer");
+      let actual = quiz?.questions;
+      const given = latestAttempt?.responses;
+      if (actual && actual.length > 0) {
+        setMarkedAnswers(
+          actual.map((question: any) => {
+            let res = given.filter(
+              (response: any) => response.questionId === question._id
+            );
+            console.log(res[0]);
+            let points = question.points;
+            if (question.type === "fib") {
+              if (!question.possibleAnswers.includes(res[0].answer)) {
+                points = 0;
+              }
+            }
+            if (question.type === "mcq") {
+              const choice = question.choices.filter((choice: any) => {
+                return choice.answer === res[0].answer;
+              });
+              points = 0;
+              if (choice.length > 0 && choice[0].isCorrect) {
+                points = 10;
+              }
+            }
+            if (question.type === "tf") {
+              if (String(question.answer) != res[0].answer) {
+                points = 0;
+              }
+            }
+            return {
+              ...question,
+              markedAnswer: res[0].answer,
+              points: points,
+              answer: String(question.answer),
+            };
+          })
         );
-        return;
       }
     }
+  }
 
-    try {
-      // Increment the user's attempt count
-      await quizzesClient.incrementUserQuizAttempt(cid!, qid!);
-      // Optionally update the local state
-      setUserAttempts((prev) => (prev !== null ? prev + 1 : 1));
-      // Navigate to the quiz attempt page
-      navigate(`/Kanbas/Courses/${cid}/Quizzes/${qid}/Attempt`);
-    } catch (err: any) {
-      console.error("Error beginning the quiz:", err);
-      alert("Failed to begin the quiz. Please try again later.");
+  function isQuizAvailable(dates: any): boolean {
+    const availableDate = new Date(dates.available);
+    const untilDate = new Date(dates.until);
+    const currentDate = new Date();
+    if (currentDate < availableDate) {
+      return false;
+    } else if (currentDate > availableDate && currentDate < untilDate) {
+      return true;
+    } else {
+      return false;
     }
-  };
-
-  if (!this_quiz) {
-    return <div>Loading quiz details...</div>;
   }
 
   return (
-    <div>
-      {/* Quiz Details */}
-      {(currentUser?.role === "FACULTY" || currentUser?.role === "ADMIN") && (
-        <div>
-          <Link to={`/Kanbas/Courses/${cid}/Quizzes/${qid}/Preview`}>
-            <button className='btn btn-secondary me-2'>Preview</button>
-          </Link>
-          <Link to={`/Kanbas/Courses/${cid}/Quizzes/${qid}/Edit/Details`}>
-            <button className='btn btn-secondary'>
-              <FaPencil className='me-2' />
-              Edit
+    <div className='container mt-4'>
+      {/* Buttons */}
+      {currentUser && currentUser?.role === "FACULTY" && (
+        <>
+          <div className='d-flex justify-content-center mb-3'>
+            <button
+              className='btn btn-secondary me-2'
+              onClick={() =>
+                navigate(`/Kanbas/Courses/${cid}/Quizzes/Attempt/${qid}`)
+              }
+            >
+              Preview
             </button>
-          </Link>
-
-          <Link to={`/Kanbas/Courses/${cid}/Quizzes/${qid}/Review`}>
-            <button className='btn btn-secondary ms-2'>
-              Review Last Attempt
+            <button
+              className='btn btn-secondary me-2'
+              onClick={() =>
+                navigate(`/Kanbas/Courses/${cid}/Quizzes/Edit/${qid}`)
+              }
+            >
+              <FaPencilAlt className='me-2' /> Edit{" "}
+              {/* Pencil icon with label */}
             </button>
-          </Link>
+          </div>
           <hr />
-          <h3 className='mt-2 mb-4 ms-3'>{this_quiz.title}</h3>
-          {/* Quiz Details */}
-          <div className='row'>
-            <div className='col-3 text-end'>
-              <span className='float-end'>
-                <strong>Quiz Type</strong>
-              </span>
-            </div>
-            <div className='col-9'>{this_quiz.quizType}</div>
-          </div>
-          <div className='row'>
-            <div className='col-3 text-end'>
-              <span className='float-end'>
-                <strong>Points</strong>
-              </span>
-            </div>
-            <div className='col-9'>{this_quiz.points}</div>
-          </div>
-          <div className='row'>
-            <div className='col-3  text-end'>
-              <span className='float-end'>
-                <strong>Assignment Group</strong>
-              </span>
-            </div>
-            <div className='col-9'>
-              {this_quiz.assignmentGroup.toUpperCase()}
-            </div>
-          </div>
-          <div className='row'>
-            <div className='col-3  text-end'>
-              <span className='float-end'>
-                <strong>Shuffle Answers</strong>
-              </span>
-            </div>
-            <div className='col-9'>
-              {this_quiz.shuffleAnswers ? "Yes" : "No"}
-            </div>
-          </div>
-          <div className='row'>
-            <div className='col-3 text-end'>
-              <span className='float-end'>
-                <strong>Time Limit</strong>
-              </span>
-            </div>
-            <div className='col-9'>
-              {this_quiz.timeLimit === -1
-                ? "None"
-                : this_quiz.timeLimit + " minutes"}
-            </div>
-          </div>
-          <div className='row'>
-            <div className='col-3 text-end'>
-              <span className='float-end'>
-                <strong>Multiple Attempts</strong>
-              </span>
-            </div>
-            <div className='col-9'>
-              {this_quiz.allowMultipleAttempts ? "Yes" : "No"}
-            </div>
-          </div>
-          <div className='row'>
-            <div className='col-3 text-end'>
-              <span className='float-end'>
-                <strong>How Many Attempts</strong>
-              </span>
-            </div>
-            <div className='col-9'>{this_quiz.maxAttempts}</div>
-          </div>
-          <div className='row'>
-            <div className='col-3 text-end'>
-              <span className='float-end'>
-                <strong>Show Correct Answers</strong>
-              </span>
-            </div>
-            <div className='col-9'>
-              {this_quiz.showCorrectAnswers ? "Yes" : "No"}
-            </div>
-          </div>
-          <div className='row'>
-            <div className='col-3 text-end'>
-              <span className='float-end'>
-                <strong>Access Code</strong>
-              </span>
-            </div>
-            <div className='col-9'>{this_quiz.accessCode}</div>
-          </div>
-          <div className='row'>
-            <div className='col-3 text-end'>
-              <span className='float-end'>
-                <strong>One Question at a Time</strong>
-              </span>
-            </div>
-            <div className='col-9'>
-              {this_quiz.oneQuestionAtATime ? "Yes" : "No"}
-            </div>
-          </div>
-          <div className='row'>
-            <div className='col-3 text-end'>
-              <span className='float-end'>
-                <strong>Webcam Required</strong>
-              </span>
-            </div>
-            <div className='col-9'>{this_quiz.webcam ? "Yes" : "No"}</div>
-          </div>
-          <div className='row'>
-            <div className='col-3 text-end'>
-              <span className='float-end text-end'>
-                <strong>Lock Questions after Answering</strong>
-              </span>
-            </div>
-            <div className='col-9'>
-              {this_quiz.lockQuestions ? "Yes" : "No"}
-            </div>
-          </div>
-          <div className='row'>
-            <div className='col-3 text-end'>
-              <span className='float-end'>
-                <strong>Due</strong>
-              </span>
-            </div>
-            <div className='col-9'>
-              <strong>
-                {this_quiz.dueDate &&
-                  new Date(this_quiz.dueDate).toLocaleDateString("en-US", {
-                    year: "numeric",
-                    month: "long",
-                    day: "numeric",
-                    hour: "numeric",
-                    minute: "numeric",
-                    hour12: true,
-                  })}
-              </strong>
-            </div>
-          </div>
-          <div className='row'>
-            <div className='col-3 text-end'>
-              <span className='float-end'>
-                <strong>Available</strong>
-              </span>
-            </div>
-            <div className='col-9'>
-              from&nbsp;
-              <strong>
-                {this_quiz.availableFrom &&
-                  new Date(this_quiz.availableFrom).toLocaleDateString(
-                    "en-US",
-                    {
-                      year: "numeric",
-                      month: "long",
-                      day: "numeric",
-                      hour: "numeric",
-                      minute: "numeric",
-                      hour12: true,
-                    }
-                  )}
-              </strong>
-              &nbsp;until
-              <strong>
-                &nbsp;
-                {this_quiz.availableUntil &&
-                  new Date(this_quiz.availableUntil).toLocaleDateString(
-                    "en-US",
-                    {
-                      year: "numeric",
-                      month: "long",
-                      day: "numeric",
-                      hour: "numeric",
-                      minute: "numeric",
-                      hour12: true,
-                    }
-                  )}
-              </strong>
-            </div>
-          </div>
-        </div>
+        </>
       )}
 
-      {currentUser?.role === "STUDENT" && (
-        <div>
-          <button
-            className='btn btn-danger'
-            onClick={handleBeginQuiz}
-            disabled={loadingAttempts}
-          >
-            {loadingAttempts ? "Loading..." : "Begin Quiz"}
-          </button>
-          {userAttempts !== 0 ? (
-            <Link to={`/Kanbas/Courses/${cid}/Quizzes/${qid}/Review`}>
-              <button className='btn btn-secondary ms-2'>
-                Review Last Attempt
-              </button>
-            </Link>
-          ) : (
-            <button className='btn btn-secondary ms-2' disabled>
-              No Prior Attempts
-            </button>
-          )}
-          {error && <div className='text-danger mt-2'>{error}</div>}
-          {latestAttemptError && (
-            <div className='text-danger mt-2'>{latestAttemptError}</div>
-          )}
-          {!loadingAttempts && (
-            <div className='mt-2'>
-              <strong>
-                Attempts:{" "}
-                {userAttempts !== null
-                  ? `${userAttempts} / ${this_quiz.maxAttempts}`
-                  : "N/A"}
-              </strong>
-            </div>
-          )}
-          {!loadingLatestAttempt && latestAttempt && (
-            <div className='mt-2'>
-              <strong>Latest Attempt:</strong>
-              <div>Score: {latestAttempt.score}</div>
-              <div>
-                Completed At:{" "}
-                {new Date(latestAttempt.lastAttempt).toLocaleString("en-US", {
-                  year: "numeric",
-                  month: "long",
-                  day: "numeric",
-                  hour: "numeric",
-                  minute: "numeric",
-                  hour12: true,
-                })}
-              </div>
-              {/* Add more details about the latest attempt as needed */}
-            </div>
-          )}
+      {/* Header */}
+      <div className='d-flex justify-content-between align-items-center mb-3'>
+        <h3>{quiz?.title}</h3>
+      </div>
+
+      {/* Details Section */}
+      <div className='row mb-4'>
+        <div className='col-md-8'>
+          {" "}
+          {/* Constrain width and align left */}
+          <table className='table table-borderless table-sm'>
+            {" "}
+            {/* Reduced spacing */}
+            <tbody>
+              <tr>
+                <th scope='row' className='text-end pe-3'>
+                  Quiz Type
+                </th>
+                <td className='text-start'>{quiz?.quizType}</td>
+              </tr>
+              <tr>
+                <th scope='row' className='text-end pe-3'>
+                  Points
+                </th>
+                <td className='text-start'>
+                  {calculateTotalPoints(quiz?.questions)}
+                </td>
+              </tr>
+              <tr>
+                <th scope='row' className='text-end pe-3'>
+                  Assignment Group
+                </th>
+                <td className='text-start'>{quiz?.assignmentGroup}</td>
+              </tr>
+              <tr>
+                <th scope='row' className='text-end pe-3'>
+                  Shuffle Answers
+                </th>
+                <td className='text-start'>
+                  {quiz?.settings.shuffleAnswers ? "Yes" : "No"}
+                </td>
+              </tr>
+              <tr>
+                <th scope='row' className='text-end pe-3'>
+                  Time Limit
+                </th>
+                <td className='text-start'>
+                  {quiz?.settings.timeLimit} Minutes
+                </td>
+              </tr>
+              <tr>
+                <th scope='row' className='text-end pe-3'>
+                  Multiple Attempts
+                </th>
+                <td className='text-start'>
+                  {quiz?.settings.multipleAttempts.enabled ? "Yes" : "No"}
+                </td>
+              </tr>
+              <tr>
+                <th scope='row' className='text-end pe-3'>
+                  View Responses
+                </th>
+                <td className='text-start'>Yes</td>
+              </tr>
+              <tr>
+                <th scope='row' className='text-end pe-3'>
+                  Show Correct Answers
+                </th>
+                <td className='text-start'>
+                  {quiz?.settings.showCorrectAnswers.enabled ? "Yes" : "No"}
+                </td>
+              </tr>
+              <tr>
+                <th scope='row' className='text-end pe-3'>
+                  One Question at a Time
+                </th>
+                <td className='text-start'>
+                  {quiz?.settings.oneQuestionAtATime ? "Yes" : "No"}
+                </td>
+              </tr>
+              <tr>
+                <th scope='row' className='text-end pe-3'>
+                  Require Respondus LockDown Browser
+                </th>
+                <td className='text-start'>No</td>
+              </tr>
+              <tr>
+                <th scope='row' className='text-end pe-3'>
+                  Required to View Quiz Results
+                </th>
+                <td className='text-start'>No</td>
+              </tr>
+              <tr>
+                <th scope='row' className='text-end pe-3'>
+                  Webcam Required
+                </th>
+                <td className='text-start'>
+                  {quiz?.settings.webcamRequired ? "Yes" : "No"}
+                </td>
+              </tr>
+              <tr>
+                <th scope='row' className='text-end pe-3'>
+                  Lock Questions After Answering
+                </th>
+                <td className='text-start'>
+                  {quiz?.settings.lockQuestionsAfterAnswering ? "Yes" : "No"}
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
+      </div>
+
+      {/* Availability Section */}
+      <div className='row'>
+        <div className='col-md-8 mx-auto'>
+          {" "}
+          {/* Center align the table */}
+          <table className='table table-borderless table-sm'>
+            {" "}
+            {/* Reduced spacing */}
+            <thead className='border-bottom'>
+              {" "}
+              {/* Add bottom border */}
+              <tr>
+                <th className='text-center align-middle'>Due</th>
+                <th className='text-center align-middle'>For</th>
+                <th className='text-center align-middle'>Available from</th>
+                <th className='text-center align-middle'>Until</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className='text-center align-middle'>
+                  {quiz?.dates.due.slice(0, 16).split("T")[0]} at{" "}
+                  {quiz?.dates.due.slice(0, 16).split("T")[1]}
+                </td>
+                <td className='text-center align-middle'>Everyone</td>
+                <td className='text-center align-middle'>
+                  {quiz?.dates.available.slice(0, 16).split("T")[0]} at{" "}
+                  {quiz?.dates.available.slice(0, 16).split("T")[1]}
+                </td>
+                <td className='text-center align-middle'>
+                  {quiz?.dates.until.slice(0, 16).split("T")[0]} at{" "}
+                  {quiz?.dates.until.slice(0, 16).split("T")[1]}
+                </td>
+              </tr>
+            </tbody>
+            <tfoot className='border-top'>
+              {" "}
+              {/* Add top border */}
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+      {currentUser && currentUser?.role === "STUDENT" && (
+        <>
+          <div className='row'>
+            <div className='col-md-8 mx-auto'>
+              {" "}
+              {/* Center align the table */}
+              <table className='table table-borderless table-sm'>
+                {" "}
+                {/* Reduced spacing */}
+                <thead className='border-bottom'>
+                  {" "}
+                  {/* Add bottom border */}
+                  <tr>
+                    <th className='text-center align-middle'>Submitted On</th>
+                    <th className='text-center align-middle'>Score</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <td className='text-center align-middle'>
+                    {latestAttempt?.submittedAt.split("T")[0]} at{" "}
+                    {latestAttempt?.submittedAt.split("T")[1]}
+                  </td>
+                  <td className='text-center align-middle'>
+                    {latestAttempt?.score}
+                  </td>
+                </tbody>
+                <tfoot className='border-top'>
+                  {" "}
+                  {/* Add top border */}
+                  <tr>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                </tfoot>
+              </table>
+            </div>
+          </div>
+
+          {((attempts.length === 0 && isQuizAvailable(quiz?.dates)) ||
+            (quiz?.settings.multipleAttempts.enabled &&
+              attempts?.length <
+                quiz?.settings.multipleAttempts.attemptsAllowed &&
+              isQuizAvailable(quiz.dates))) && (
+            <div className='d-flex justify-content-center mt-4'>
+              <button
+                className='btn btn-danger'
+                onClick={() =>
+                  navigate(`/Kanbas/Courses/${cid}/Quizzes/Attempt/${quiz._id}`)
+                }
+              >
+                Attempt Quiz
+              </button>
+            </div>
+          )}
+        </>
       )}
+      <br />
+      {currentUser && currentUser?.role === "STUDENT" && (
+        <h3>Marked Answers:</h3>
+      )}
+      <div>
+        <div className='row '>
+          <div className='col-1'></div>
+          <div className='col-10'>
+            {markedAnswers &&
+              markedAnswers.map((markedAnswer, index) => {
+                return (
+                  <div className='align-items-center border border-dark rounded-1 mb-5'>
+                    <div className='d-flex justify-content-between p-3 bg-secondary border border-dark rounded-1'>
+                      <div>Question {index + 1}</div>
+                      <div>pts: {markedAnswer.points}/10</div>
+                    </div>
+                    <div className='p-3'>
+                      <div>{markedAnswer.question}</div>
+                    </div>
+
+                    <div>
+                      <div>
+                        {markedAnswer.type === "tf" &&
+                          ["true", "false"].map((option) => {
+                            return (
+                              <div>
+                                <hr />
+                                <div className='d-flex align-items-center '>
+                                  {/* <div className=" fw-bold text-white bg-success d-flex align-items-center border border-dark rounded-1 p-2 ps-3 pe-3">Correct !</div>  */}
+                                  <div className='col-3'>
+                                    {" "}
+                                    <AnswerTypeElement
+                                      text={
+                                        markedAnswer.markedAnswer === option
+                                          ? option === markedAnswer.answer
+                                            ? "Correct!"
+                                            : "You Answered"
+                                          : option === markedAnswer.answer
+                                          ? "Correct Answer"
+                                          : ""
+                                      }
+                                      color={
+                                        markedAnswer.markedAnswer === option
+                                          ? option === markedAnswer.answer
+                                            ? "btn-success"
+                                            : "btn-danger"
+                                          : option === markedAnswer.answer
+                                          ? "btn-secondary"
+                                          : ""
+                                      }
+                                    />{" "}
+                                  </div>
+                                  <div className='col-9 p-2'>
+                                    {" "}
+                                    <label className='w-100 ps-1'>
+                                      {option}
+                                    </label>
+                                  </div>
+                                </div>
+                              </div>
+                            );
+                          })}
+                        {markedAnswer.type === "mcq" &&
+                          markedAnswer.choices.map((option: any) => {
+                            return (
+                              <div>
+                                <hr />
+                                <div className='d-flex align-items-center '>
+                                  {/* <div className=" fw-bold text-white bg-success d-flex align-items-center border border-dark rounded-1 p-2 ps-3 pe-3">Correct !</div>  */}
+                                  <div className='col-3'>
+                                    {" "}
+                                    <AnswerTypeElement
+                                      text={
+                                        markedAnswer.markedAnswer ==
+                                        option.answer
+                                          ? option.isCorrect
+                                            ? "Correct!"
+                                            : "You Answered"
+                                          : option.isCorrect
+                                          ? "Correct Answer"
+                                          : ""
+                                      }
+                                      color={
+                                        markedAnswer.markedAnswer ==
+                                        option.answer
+                                          ? option.isCorrect
+                                            ? "btn-success"
+                                            : "btn-danger"
+                                          : option.isCorrect
+                                          ? "btn-secondary"
+                                          : ""
+                                      }
+                                    />{" "}
+                                  </div>
+                                  <div className='col-9 p-2'>
+                                    {" "}
+                                    <label className='w-100 ps-1'>
+                                      {option.answer}
+                                    </label>
+                                  </div>
+                                </div>
+                              </div>
+                            );
+                          })}
+                        {markedAnswer.type === "fib" && (
+                          <MarkedAnswerFillInTheBlanks
+                            markedAnswer={markedAnswer}
+                          />
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+          </div>
+        </div>
+      </div>
     </div>
   );
-};
-
-export default QuizDetails;
+}

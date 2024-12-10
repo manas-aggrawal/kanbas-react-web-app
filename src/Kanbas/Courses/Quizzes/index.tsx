@@ -1,254 +1,194 @@
-import { FaMagnifyingGlass } from "react-icons/fa6";
-import { FaPlus } from "react-icons/fa6";
-import { BsGripVertical } from "react-icons/bs";
-import { RxRocket } from "react-icons/rx";
-import { useParams } from "react-router";
-import { useSelector, useDispatch } from "react-redux";
-import { Link } from "react-router-dom";
+import QuizControls from "./QuizControls";
 import QuizControlButtons from "./QuizControlButtons";
-import { CiSearch } from "react-icons/ci";
+import QuizControlRightButtons from "./QuizControlRightButtons";
+import { Link, useNavigate } from "react-router-dom";
+import { GoTriangleDown } from "react-icons/go";
+import { BsGripVertical } from "react-icons/bs";
+import { setQuizzes, deleteQuiz, updateQuiz } from "./reducer";
+import { useDispatch, useSelector } from "react-redux";
+import AssignmentControlButtons from "../Assignments/AssignmentControlButtons";
 import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import { IoRocketOutline } from "react-icons/io5";
+import * as quizClient from "./client";
 import * as coursesClient from "../client";
-import { deleteQuiz, setQuizzes } from "./reducer";
-import QuizGroupControlButtons from "./QuizGroupControlButtons";
 
 export default function Quizzes() {
   const { cid } = useParams();
-  const { currentUser } = useSelector((state: any) => state.accountReducer);
   const { quizzes } = useSelector((state: any) => state.quizzesReducer);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const { currentUser } = useSelector((state: any) => state.accountReducer);
+
   const fetchQuizzes = async () => {
     const quizzes = await coursesClient.findQuizzesForCourse(cid as string);
-    if (currentUser.role === "STUDENT") {
-      dispatch(
-        setQuizzes(
-          quizzes.filter((q: { published: boolean }) => q.published === true)
-        )
+    let filteredQuizzes = quizzes;
+    if (currentUser?.role === "STUDENT") {
+      filteredQuizzes = quizzes.filter(
+        (quiz: any) => quiz.isPublished === true
       );
+      dispatch(setQuizzes(filteredQuizzes));
     } else {
       dispatch(setQuizzes(quizzes));
     }
   };
+
   useEffect(() => {
     fetchQuizzes();
-  }, [currentUser]);
+  }, [dispatch]);
+
+  const removeQuiz = async (quizId: string) => {
+    await quizClient.deleteQuiz(quizId);
+    dispatch(deleteQuiz(quizId));
+    await fetchQuizzes();
+  };
+
+  const changePublishStatus = async (quizId: string) => {
+    const quiz = quizzes.find((q: any) => q._id === quizId);
+    const currentStatus = quiz.isPublished;
+    const updatedStatusQuiz = { ...quiz, isPublished: !currentStatus };
+    quizClient.updateQuiz(updatedStatusQuiz);
+    dispatch(updateQuiz(updatedStatusQuiz));
+    await fetchQuizzes();
+  };
+
+  function quizStatus(dates: any): string {
+    const availableDate = new Date(dates?.available ?? "");
+    const untilDate = new Date(dates?.until ?? "");
+    const currentDate = new Date();
+    if (currentDate < availableDate) {
+      return (
+        "Not Available Until " + dates.available.slice(0, 16).split("T")[0]
+      );
+    } else if (currentDate > availableDate && currentDate < untilDate) {
+      return "Available";
+    } else {
+      return "Closed";
+    }
+  }
+
+  function calculateTotalPoints(questions: any[]): number {
+    return questions.reduce((total, question) => {
+      const points = Number(question.points);
+      if (isNaN(points)) {
+        throw new Error(`Invalid points value in question: ${question.title}`);
+      }
+      return total + points;
+    }, 0);
+  }
+
+  const [latestQuizAttemptsByCourse, setLatestQuizAttemptsByCourse] = useState<
+    any[]
+  >([]);
+  const fetchLatestQuizAttemptsByCourse = async () => {
+    if (currentUser.role === "STUDENT") {
+      const latestAttempts = await quizClient.getQuizAttemptsForUserForCourse(
+        cid,
+        currentUser._id
+      );
+      setLatestQuizAttemptsByCourse(latestAttempts);
+      console.log("All Attemps: ", latestQuizAttemptsByCourse);
+    }
+  };
+
+  useEffect(() => {
+    fetchLatestQuizAttemptsByCourse();
+  }, [cid, currentUser._id]);
+
+  const getQuizScoreById = (quizId: string) => {
+    const attempt = latestQuizAttemptsByCourse.find(
+      (attempt) => attempt.quiz === quizId
+    );
+    return attempt ? `| Score: ${attempt.score}` : "";
+  };
+
+  const canTakeQuiz = (quiz: any) => {
+    const currentDate = new Date();
+    const untilDate = new Date(quiz.dates?.until ?? "");
+    const availableDate = new Date(quiz.dates?.available ?? "");
+    const attempt = latestQuizAttemptsByCourse.find((a) => a.quiz === quiz._id);
+    const attemptsExhausted =
+      attempt &&
+      attempt.attemptNumber >= quiz?.multipleAttempts?.attemptsAllowed;
+    return (
+      currentDate < untilDate &&
+      !attemptsExhausted &&
+      availableDate < currentDate
+    );
+  };
+
+  const handleQuizClick = (quiz: any) => {
+    if (currentUser?.role === "STUDENT") {
+      if (canTakeQuiz(quiz)) {
+        navigate(`#/Kanbas/Courses/${cid}/Quizzes/Attempt/${quiz._id}`);
+      } else {
+        alert(
+          "You cannot take this quiz. Either the deadline has passed or you've exhausted your attempts."
+        );
+      }
+    } else {
+      console.log("yha aa rha hai kya?");
+      navigate(`#/Kanbas/Courses/${cid}/Quizzes/Info/${quiz._id}`);
+    }
+  };
 
   return (
-    <div id='wd-quizzes' className='m-5'>
-      <div id='wd-search-quizzes-box' className='row'>
-        <div className='col-8'>
-          <div className='search-bar me-2 mb-2 float-start d-flex align-items-center'>
-            <CiSearch className='position-relative m-2 fs-4' />
-            <input
-              id='wd-search-assignment'
-              className='form-control border-0'
-              placeholder='Search...'
-            ></input>
-          </div>
-        </div>
-        {currentUser.role === "FACULTY" && (
-          <div className='col-4'>
-            <Link to={`/Kanbas/Courses/${cid}/Quizzes/@/Edit/Details`}>
-              <button
-                id='wd-add-quizzes'
-                className='btn btn-lg btn-danger me-1 float-end'
-              >
-                <FaPlus
-                  className='position-relative me-2'
-                  style={{ bottom: "1px" }}
-                />
-                Quiz
-              </button>
-            </Link>
-          </div>
-        )}
+    <div>
+      <QuizControls />
+      <div
+        className='wd-quizzes-title p-3 ps-2 bg-secondary'
+        style={{ color: "black", border: "1px solid black" }}
+      >
+        <BsGripVertical className='me-2 fs-3' /> <GoTriangleDown />
+        <strong>QUIZZES</strong>
+        <AssignmentControlButtons
+          assignmentId={""}
+          deleteAssignment={function (assignementId: string): void {
+            throw new Error("Function not implemented.");
+          }}
+        />
       </div>
-      <br />
-      <br />
-      <ul className='list-group rounded-0'>
-        <li className='list-group-item p-0 fs-5 border-gray'>
-          <div className='wd-title p-3 ps-3 bg-secondary'>
-            {currentUser.role === "FACULTY" && (
-              <BsGripVertical className='me-2 fs-3' />
+      <ul className='wd-quizzes-list list-group rounded-0'>
+        {quizzes.map((quiz: any) => (
+          <li
+            key={quiz._id}
+            className='wd-quiz-list-item list-group-item d-flex align-items-center'
+            style={{ border: "1px solid black", color: "black" }}
+          >
+            <BsGripVertical className='text-muted me-2 fs-5' />
+            <IoRocketOutline style={{ marginRight: 10, color: "green" }} />
+            <div className='flex-grow-1'>
+              <a
+                href={`#/Kanbas/Courses/${cid}/Quizzes/Info/${quiz._id}`}
+                // onClick={() => handleQuizClick(quiz)}
+                style={{ color: "black" }}
+              >
+                <strong>{quiz.title}</strong>
+              </a>
+              <div className='small'>
+                <strong>{quizStatus(quiz.dates)}</strong> |{" "}
+                <strong>Due </strong>{" "}
+                {quiz.dates?.due?.slice(0, 16).split("T")[0]} at{" "}
+                {quiz.dates?.due?.slice(0, 16).split("T")[1]} |{" "}
+                {calculateTotalPoints(quiz.questions)} pts |{" "}
+                {quiz.questions.length} Questions {getQuizScoreById(quiz._id)}
+              </div>
+            </div>
+            {currentUser && currentUser?.role === "FACULTY" && (
+              <QuizControlRightButtons
+                quizId={quiz._id}
+                deleteQuiz={(quizId) => {
+                  removeQuiz(quizId);
+                }}
+                isPublished={quiz.isPublished}
+                negatePublishStatus={(quizId) => {
+                  changePublishStatus(quizId);
+                }}
+              />
             )}
-            QUIZZES
-            <QuizGroupControlButtons />
-          </div>
-        </li>
-        <ul id='wd-quizzes-list' className='list-group rounded-0'>
-          {(currentUser.role === "FACULTY" || currentUser.role === "ADMIN") &&
-            quizzes.map(
-              (quiz: {
-                _id: string;
-                title: string;
-                course: string;
-                availableFrom: Date;
-                availableUntil: Date;
-                dueDate: Date;
-                points: number;
-                questions: any[];
-                published: boolean;
-              }) => (
-                <li className='wd-quiz-list-item list-group-item p-3 ps-1 fs-5'>
-                  <div className='row align-items-center'>
-                    <div className='col-1'>
-                      <BsGripVertical className='me-2 fs-3' />
-                      <RxRocket className='fs-5 text-success' />
-                    </div>
-                    <div className='col-9'>
-                      <a
-                        className='wd-quiz-link text-decoration-none text-dark h5'
-                        href={`#/Kanbas/Courses/${cid}/Quizzes/${quiz._id}`}
-                      >
-                        {quiz.title}
-                      </a>
-                      <br />
-                      <span className='custom-gray1 fw-bold'>
-                        {quiz.availableFrom &&
-                          new Date(quiz.availableFrom) > new Date() &&
-                          "Not available until"}
-                        {quiz.availableUntil &&
-                          new Date(quiz.availableUntil) < new Date() &&
-                          "Closed"}
-                        {quiz.availableFrom &&
-                          new Date(quiz.availableFrom) <= new Date() &&
-                          new Date(quiz.availableUntil) >= new Date() &&
-                          "Available since"}
-                        &nbsp;
-                      </span>
-                      <span className=''>
-                        <span className='custom-gray1'>
-                          {quiz.availableFrom &&
-                            !(new Date(quiz.availableUntil) < new Date()) &&
-                            new Date(quiz.availableFrom).toLocaleDateString(
-                              "en-US",
-                              {
-                                weekday: "long",
-                                year: "numeric",
-                                month: "long",
-                                day: "numeric",
-                                hour: "numeric",
-                                minute: "numeric",
-                                hour12: true,
-                              }
-                            )}
-                          &nbsp;&nbsp;|&nbsp;&nbsp;
-                          <strong>Due</strong>&nbsp;
-                          {quiz.dueDate &&
-                            new Date(quiz.dueDate).toLocaleDateString("en-US", {
-                              weekday: "long",
-                              year: "numeric",
-                              month: "long",
-                              day: "numeric",
-                              hour: "numeric",
-                              minute: "numeric",
-                              hour12: true,
-                            })}
-                          &nbsp;&nbsp;|&nbsp;&nbsp;{quiz.points}&nbsp;
-                          pts&nbsp;&nbsp;|&nbsp;&nbsp; {quiz.questions.length}
-                          &nbsp;Questions
-                        </span>
-                      </span>
-                    </div>
-                    <div className='col-2'>
-                      {cid && <QuizControlButtons quiz={quiz} cid={cid} />}
-                    </div>
-                  </div>
-                </li>
-              )
-            )}
-          {!(currentUser.role === "FACULTY" || currentUser.role === "ADMIN") &&
-            quizzes.map(
-              (quiz: {
-                _id: string;
-                course: string;
-                points: number;
-                questions: any[];
-                published: boolean;
-                score: number;
-                title: string;
-                availableFrom: Date;
-                availableUntil: Date;
-                attempts: any[];
-                dueDate: Date;
-              }) => (
-                <li className='wd-quiz-list-item list-group-item p-3 ps-3 fs-5'>
-                  <div className='row align-items-center'>
-                    <div className='col-1 ms-2' style={{ width: "4%" }}>
-                      <RxRocket className='fs-5' />
-                    </div>
-                    <div className='col-11'>
-                      <a
-                        className='wd-quiz-link text-decoration-none text-dark h5'
-                        href={`#/Kanbas/Courses/${cid}/Quizzes/${quiz._id}`}
-                      >
-                        {quiz.title}
-                      </a>
-                      <br />
-                      <span className='custom-gray1 fw-bold'>
-                        {quiz.availableFrom &&
-                          new Date(quiz.availableFrom) > new Date() &&
-                          "Not available until"}
-                        {quiz.availableUntil &&
-                          new Date(quiz.availableUntil) < new Date() &&
-                          "Closed"}
-                        {quiz.availableFrom &&
-                          new Date(quiz.availableFrom) <= new Date() &&
-                          new Date(quiz.availableUntil) >= new Date() &&
-                          "Available"}
-                        &nbsp;
-                      </span>
-                      <span className=''>
-                        <span className='custom-gray1'>
-                          {quiz.availableFrom &&
-                            !(new Date(quiz.availableUntil) < new Date()) &&
-                            new Date(quiz.availableFrom).toLocaleDateString(
-                              "en-US",
-                              {
-                                weekday: "long",
-                                year: "numeric",
-                                month: "long",
-                                day: "numeric",
-                                hour: "numeric",
-                                minute: "numeric",
-                                hour12: true,
-                              }
-                            )}
-                          &nbsp;&nbsp;|&nbsp;&nbsp;
-                          <strong>Due</strong>&nbsp;
-                          {quiz.dueDate &&
-                            new Date(quiz.dueDate).toLocaleDateString("en-US", {
-                              weekday: "long",
-                              year: "numeric",
-                              month: "long",
-                              day: "numeric",
-                              hour: "numeric",
-                              minute: "numeric",
-                              hour12: true,
-                            })}
-                          &nbsp;&nbsp;|&nbsp;&nbsp;{quiz.points}&nbsp;
-                          pts&nbsp;&nbsp;|&nbsp;&nbsp; {quiz.questions.length}
-                          &nbsp;Questions&nbsp;&nbsp;|&nbsp;&nbsp;
-                        </span>
-                        {/* {quiz.score && ( */}
-                        {currentUser.role === "STUDENT" && (
-                          <span>
-                            Last attempt score:{" "}
-                            {quiz.attempts.find((attempt) => {
-                              // console.log(attempt);
-                              return attempt.user === currentUser._id;
-                            })?.lastScore || "N/A"}
-                          </span>
-                        )}
-                        {/* )}
-                        {!quiz.score && <span>Last attempt score: N/A</span>} */}
-                      </span>
-                    </div>
-                  </div>
-                </li>
-              )
-            )}
-        </ul>
+          </li>
+        ))}
       </ul>
     </div>
   );

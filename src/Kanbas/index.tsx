@@ -17,15 +17,15 @@ const Kanbas = () => {
   const [courses, setCurrCourses] = useState([] as any[]);
   const [enrollments, setCurrEnrollments] = useState([] as any[]);
   const [enrolling, setEnrolling] = useState<boolean>(false);
-  const findCoursesForUser = async () => {
-    try {
-      const courses = await userClient.findCoursesForUser(currentUser._id);
+  // const findCoursesForUser = async () => {
+  //   try {
+  //     const courses = await userClient.findCoursesForUser(currentUser._id);
 
-      setCourses(courses);
-    } catch (error) {
-      console.error(error);
-    }
-  };
+  //     setCourses(courses);
+  //   } catch (error) {
+  //     console.error(error);
+  //   }
+  // };
 
   const updateEnrollment = async (courseId: string, enrolled: boolean) => {
     if (enrolled) {
@@ -68,12 +68,13 @@ const Kanbas = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    if (enrolling) {
-      fetchCourses();
-    } else {
-      findCoursesForUser();
-    }
-  }, [currentUser, enrolling]);
+    // if (enrolling) {
+    //   fetchCourses();
+    // } else {
+    //   findCoursesForUser();
+    // }
+    fetchCourses();
+  }, [currentUser]);
 
   const addNewCourse = async (course: {
     name: string;
