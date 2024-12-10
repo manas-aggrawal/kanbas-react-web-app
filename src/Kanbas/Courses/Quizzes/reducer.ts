@@ -35,86 +35,9 @@ interface Quiz {
   questions: Array<{ _id: string; [key: string]: any }>;
 }
 
-// Define your initial state
-// export const initialState: { quizzes: Quiz[] } = {
-//     quizzes: [
-//         {
-//             "_id": "A101",
-//             "title": "Propulsion Assignment",
-//             "course": "RS101",
-//             "quizType": "Graded Quiz",
-//             "assignmentGroup": "QUIZZES",
-//             "settings": {
-//                 "shuffleAnswers": true,
-//                 "timeLimit": 20,
-//                 "multipleAttempts": {
-//                     "enabled": true,
-//                     "attemptsAllowed": 0,
-//                 },
-//                 "showCorrectAnswers": {
-//                     "enabled": true,
-//                     "timing": "",
-//                 },
-//                 "accessCode": "",
-//                 "oneQuestionAtATime": true,
-//                 "webcamRequired": true,
-//                 "lockQuestionsAfterAnswering": true,
-//             },
-//             "dates": {
-//                 "availableDate": "2024-05-06",
-//                 "availableTime": "12:00 AM",
-//                 "dueDate": "2024-05-13",
-//                 "dueTime": "12:00 AM",
-//                 "untilDate": "2024-05-06",
-//                 "untilTime": "12:00 AM",
-//             },
-//             "points": "100",
-//             "description": "The assignment is available online. Submit a link to the landing page of courses.",
-//             "isPublished": false,
-//             "totQuestions": "10 Questions",
-//             "questions": [],
-//         },
-//         {
-//             "_id": "A102",
-//             "title": "Aerodynamics Quiz",
-//             "quizType": "",
-//             "assignmentGroup": "",
-//             "course": "RS102",
-//             "settings": {
-//                 "shuffleAnswers": true,
-//                 "timeLimit": 0,
-//                 "multipleAttempts": {
-//                     "enabled": true,
-//                     "attemptsAllowed": 0,
-//                 },
-//                 "showCorrectAnswers": {
-//                     "enabled": true,
-//                     "timing": "",
-//                 },
-//                 "accessCode": "",
-//                 "oneQuestionAtATime": true,
-//                 "webcamRequired": true,
-//                 "lockQuestionsAfterAnswering": true,
-//             },
-//             "dates": {
-//                 "availableDate": "2024-06-01",
-//                 "availableTime": "12:00 AM",
-//                 "dueDate": "2024-06-07",
-//                 "dueTime": "5:00 PM",
-//                 "untilDate": "2024-06-01",
-//                 "untilTime": "9:00 AM",
-//             },
-//             "points": "80",
-//             "description": "A quiz about aerodynamics. Complete it by the due date.",
-//             "isPublished": true,
-//             "totQuestions": "10 Questions",
-//             "questions": [],
-//         }
-//     ],
-// };
-
-const initialState: { quizzes: Quiz[] } = {
+const initialState: { quizzes: Quiz[]; quiz: {} } = {
   quizzes: [],
+  quiz: {},
 };
 
 // Create the slice
@@ -159,6 +82,9 @@ const quizzesSlice = createSlice({
         quiz.questions = quiz.questions.filter((q) => q.q_id !== questionId);
       }
     },
+    setQuiz: (state, { payload }) => {
+      state.quiz = payload.quiz;
+    },
   },
 });
 
@@ -170,6 +96,7 @@ export const {
   addQuestionToQuiz,
   updateQuestionInQuiz,
   deleteQuestionFromQuiz,
+  setQuiz,
 } = quizzesSlice.actions;
 
 // Export the reducer and initialState

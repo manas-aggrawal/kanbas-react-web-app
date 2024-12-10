@@ -38,6 +38,7 @@ export const getQuizAttemptsForUserForCourse = async (
   return response.data;
 };
 export const getQuizById = async (quizId: String) => {
-  const response = await axiosWithCredentials.get(`${QUIZZES_API}/${quizId}`);
-  return response.data;
+  const { data } = await axiosWithCredentials.get(`${QUIZZES_API}/${quizId}`);
+
+  return data;
 };

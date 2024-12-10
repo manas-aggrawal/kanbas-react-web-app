@@ -50,14 +50,14 @@ export default function QuizDetails() {
       qid,
       currentUser._id
     );
+
     setAttempts(fetchedAttempts);
 
-    if (fetchedAttempts.length > 0) {
-      // Reduce fetched attempts to find the latest one
+    if (fetchedAttempts && fetchedAttempts.length > 0) {
       const latest = fetchedAttempts.reduce((prev: any, current: any) => {
-        return new Date(current.submittedAt) > new Date(prev.submittedAt)
-          ? current
-          : prev;
+        const prevDate = new Date(prev.submittedAt);
+        const currentDate = new Date(current.submittedAt);
+        return currentDate > prevDate ? current : prev;
       }, fetchedAttempts[0]); // Initialize with the first attempt
 
       setLatestAttempt(latest); // Update the state with the latest attempt
@@ -70,16 +70,17 @@ export default function QuizDetails() {
     if (qid) {
       const Quiz = await quizClient.getQuizById(qid);
 
-      setQuiz({ ...Quiz });
+      setQuiz(Quiz);
     }
   };
   useEffect(() => {
     fetchQuiz();
+
     if (currentUser.role === "STUDENT") {
       fetchAttempts();
       questionAndAnswer();
     }
-  }, [currentUser]);
+  }, [currentUser, quiz]);
 
   function calculateTotalPoints(questions: any[]): number {
     if (questions && questions.length > 0) {
@@ -341,6 +342,7 @@ export default function QuizDetails() {
           </table>
         </div>
       </div>
+
       {currentUser && currentUser?.role === "STUDENT" && (
         <>
           <div className='row'>
@@ -401,6 +403,7 @@ export default function QuizDetails() {
       {currentUser && currentUser?.role === "STUDENT" && (
         <h3>Marked Answers:</h3>
       )}
+
       <div>
         <div className='row '>
           <div className='col-1'></div>
@@ -470,7 +473,7 @@ export default function QuizDetails() {
                                     {" "}
                                     <AnswerTypeElement
                                       text={
-                                        markedAnswer.markedAnswer ==
+                                        markedAnswer.markedAnswer ===
                                         option.answer
                                           ? option.isCorrect
                                             ? "Correct!"
@@ -480,7 +483,7 @@ export default function QuizDetails() {
                                           : ""
                                       }
                                       color={
-                                        markedAnswer.markedAnswer ==
+                                        markedAnswer.markedAnswer ===
                                         option.answer
                                           ? option.isCorrect
                                             ? "btn-success"
