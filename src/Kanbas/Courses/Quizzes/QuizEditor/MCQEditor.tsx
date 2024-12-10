@@ -16,7 +16,6 @@ export default function MCQEditor({
   setChoices: any;
   reset: any;
 }) {
-  console.log("newquestion text:", questionText);
   const [possibleAnswers, setPossibleAnswers] = useState<any[]>(choices);
   const [correctAnswer, setcorrectAnswer] = useState(-1);
   const [localQuestion, setLocalQuestion] = useState(questionText);
@@ -44,7 +43,7 @@ export default function MCQEditor({
       (element) => element.isCorrect === true
     );
     const newPossibleAnswers = possibleAnswers;
-    if (currentCorrect != -1) {
+    if (currentCorrect !== -1) {
       newPossibleAnswers[currentCorrect] = {
         ...newPossibleAnswers[currentCorrect],
         isCorrect: false,
@@ -60,7 +59,7 @@ export default function MCQEditor({
   const deleteAnswer = (ind: number) => {
     if (possibleAnswers.length > 1) {
       const newAnswers = possibleAnswers.filter(
-        (answer, index) => index != ind
+        (answer, index) => index !== ind
       );
       if (newAnswers.length === 1) {
         newAnswers[0].isCorrect = true;
@@ -81,8 +80,6 @@ export default function MCQEditor({
   }, [localQuestion, possibleAnswers]);
 
   useEffect(() => {
-    console.log("Inside MCQ Editor:", questionText, choices);
-    console.log("localquestion:", localQuestion);
     setLocalQuestion(questionText);
     let currentCorrect = choices.findIndex(
       (element: any) => element.isCorrect === true

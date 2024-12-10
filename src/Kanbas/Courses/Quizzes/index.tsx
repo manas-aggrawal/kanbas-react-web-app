@@ -88,7 +88,6 @@ export default function Quizzes() {
         currentUser._id
       );
       setLatestQuizAttemptsByCourse(latestAttempts);
-      console.log("All Attemps: ", latestQuizAttemptsByCourse);
     }
   };
 
@@ -128,7 +127,6 @@ export default function Quizzes() {
         );
       }
     } else {
-      console.log("yha aa rha hai kya?");
       navigate(`#/Kanbas/Courses/${cid}/Quizzes/Info/${quiz._id}`);
     }
   };

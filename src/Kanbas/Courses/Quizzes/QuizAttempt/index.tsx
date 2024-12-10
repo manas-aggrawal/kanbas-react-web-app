@@ -81,8 +81,6 @@ export default function QuizAttempt() {
   const [questions, setQuestions] = useState<any[]>([]);
 
   const handleSubmit = async () => {
-    console.log("Quiz Submitted");
-    console.log(questions);
     const response = questions?.map((question) => {
       return {
         questionId: question._id,
@@ -90,7 +88,7 @@ export default function QuizAttempt() {
         answer: question.answer,
       };
     });
-    console.log(response);
+
     const quizSubmission = {
       quiz: qid,
       course: cid,

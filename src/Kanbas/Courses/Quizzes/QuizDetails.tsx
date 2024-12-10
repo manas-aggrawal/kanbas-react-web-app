@@ -2,15 +2,14 @@ import { FaPencilAlt } from "react-icons/fa";
 import { useNavigate, useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 import * as quizClient from "./client";
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import AnswerTypeElement from "./answerTypeElement";
 import MarkedAnswerFillInTheBlanks from "./MarkedAnswerFillInTheBlanks";
 
 export default function QuizDetails() {
   const { cid, qid } = useParams();
   const navigate = useNavigate();
-  const { quizzes } = useSelector((state: any) => state.quizzesReducer);
-  // const quiz = quizzes.find((q: any) => q._id === qid);
+
   const [quiz, setQuiz] = useState<any>({
     title: "Untitled Quiz",
     course: cid,
@@ -47,54 +46,41 @@ export default function QuizDetails() {
   const [markedAnswers, setMarkedAnswers] = useState<any[]>([]);
 
   const fetchAttempts = async () => {
-    if (currentUser.role === "STUDENT") {
-      const fetchedAttempts = await quizClient.findAttemptsForQuizByUser(
-        qid,
-        currentUser._id
-      );
-      setAttempts(fetchedAttempts);
+    const fetchedAttempts = await quizClient.findAttemptsForQuizByUser(
+      qid,
+      currentUser._id
+    );
+    setAttempts(fetchedAttempts);
 
-      if (fetchedAttempts.length > 0) {
-        // Reduce fetched attempts to find the latest one
-        const latest = fetchedAttempts.reduce((prev: any, current: any) => {
-          return new Date(current.submittedAt) > new Date(prev.submittedAt)
-            ? current
-            : prev;
-        }, fetchedAttempts[0]); // Initialize with the first attempt
+    if (fetchedAttempts.length > 0) {
+      // Reduce fetched attempts to find the latest one
+      const latest = fetchedAttempts.reduce((prev: any, current: any) => {
+        return new Date(current.submittedAt) > new Date(prev.submittedAt)
+          ? current
+          : prev;
+      }, fetchedAttempts[0]); // Initialize with the first attempt
 
-        setLatestAttempt(latest); // Update the state with the latest attempt
-      } else {
-        setLatestAttempt(null); // Clear the latest attempt if no attempts are found
-      }
+      setLatestAttempt(latest); // Update the state with the latest attempt
+    } else {
+      setLatestAttempt(null); // Clear the latest attempt if no attempts are found
     }
   };
 
   const fetchQuiz = async () => {
     if (qid) {
-      // const Quiz = await quizClient.getQuizById(latestAttempt.quiz);
       const Quiz = await quizClient.getQuizById(qid);
-      console.log("🚀 ~ fetchQuiz ~ Quiz:", Quiz);
 
       setQuiz({ ...Quiz });
     }
   };
   useEffect(() => {
-    // if (qid && currentUser._id) {
-    //   // Ensure IDs are available
-    //   fetchAttempts();
-    // }
-    // questionAndAnswer();
     fetchQuiz();
+    if (currentUser.role === "STUDENT") {
+      fetchAttempts();
+      questionAndAnswer();
+    }
   }, [currentUser]);
 
-  // useEffect(() => {
-  //   questionAndAnswer();
-  //   fetchQuiz();
-  // }, [quiz, latestAttempt]);
-
-  // useEffect(() => {
-  //   console.log("markedasnwer:", markedAnswers);
-  // }, [markedAnswers]);
   function calculateTotalPoints(questions: any[]): number {
     if (questions && questions.length > 0) {
       return questions.reduce((total, question) => {
@@ -109,10 +95,9 @@ export default function QuizDetails() {
     }
     return 0;
   }
-  //get the actual answwers and latest response and makes a consolidated object
+  // get the actual answwers and latest response and makes a consolidated object
   function questionAndAnswer() {
     if (quiz && latestAttempt) {
-      console.log("loading quesstion and answer");
       let actual = quiz?.questions;
       const given = latestAttempt?.responses;
       if (actual && actual.length > 0) {
@@ -121,7 +106,7 @@ export default function QuizDetails() {
             let res = given.filter(
               (response: any) => response.questionId === question._id
             );
-            console.log(res[0]);
+
             let points = question.points;
             if (question.type === "fib") {
               if (!question.possibleAnswers.includes(res[0].answer)) {
@@ -138,7 +123,7 @@ export default function QuizDetails() {
               }
             }
             if (question.type === "tf") {
-              if (String(question.answer) != res[0].answer) {
+              if (String(question.answer) !== res[0].answer) {
                 points = 0;
               }
             }

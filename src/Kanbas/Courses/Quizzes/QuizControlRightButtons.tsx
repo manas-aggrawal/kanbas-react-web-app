@@ -35,7 +35,6 @@ export default function QuizControlRightButtons({
     }
   };
   const handleEdit = () => {
-    console.log("Edit quiz: ", quizId);
     navigate(`Info/${quizId}`); // Navigate to the Edit page
   };
 

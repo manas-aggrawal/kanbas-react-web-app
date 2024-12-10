@@ -17,7 +17,7 @@ export default function TrueFalseEditor({
     answer ? "true" : "false"
   ); // Track the selected answer
   const [localQuestion, setLocalQuestion] = useState(questionText);
-  // console.log("updats questionP:",questionText)
+
   const handleAnswerChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSelectedAnswer(e.target.value); // Update the selected answer
     setAnswer(e.target.value === "true" ? true : false);

@@ -41,7 +41,7 @@ export default function FillInTheBlankEditor({
   const deleteAnswer = (ind: number) => {
     if (localPossibleAnswers.length > 1) {
       const newAnswers = localPossibleAnswers.filter(
-        (answer, index) => index != ind
+        (answer, index) => index !== ind
       );
       setLocalPossibleAnswers([...newAnswers]);
     }
@@ -58,7 +58,6 @@ export default function FillInTheBlankEditor({
   }, [localQuestion, localPossibleAnswers]);
 
   useEffect(() => {
-    // console.log("PossibleAns",poss)
     setLocalQuestion(questionText);
     setLocalPossibleAnswers(possibleAnswers);
   }, [reset]);
