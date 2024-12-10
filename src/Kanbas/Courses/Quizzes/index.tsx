@@ -1,7 +1,5 @@
 import QuizControls from "./QuizControls";
-import QuizControlButtons from "./QuizControlButtons";
 import QuizControlRightButtons from "./QuizControlRightButtons";
-import { Link, useNavigate } from "react-router-dom";
 import { GoTriangleDown } from "react-icons/go";
 import { BsGripVertical } from "react-icons/bs";
 import { setQuizzes, deleteQuiz, updateQuiz } from "./reducer";
@@ -17,7 +15,6 @@ export default function Quizzes() {
   const { cid } = useParams();
   const { quizzes } = useSelector((state: any) => state.quizzesReducer);
   const dispatch = useDispatch();
-  const navigate = useNavigate();
 
   const { currentUser } = useSelector((state: any) => state.accountReducer);
 
@@ -102,35 +99,6 @@ export default function Quizzes() {
     return attempt ? `| Score: ${attempt.score}` : "";
   };
 
-  const canTakeQuiz = (quiz: any) => {
-    const currentDate = new Date();
-    const untilDate = new Date(quiz.dates?.until ?? "");
-    const availableDate = new Date(quiz.dates?.available ?? "");
-    const attempt = latestQuizAttemptsByCourse.find((a) => a.quiz === quiz._id);
-    const attemptsExhausted =
-      attempt &&
-      attempt.attemptNumber >= quiz?.multipleAttempts?.attemptsAllowed;
-    return (
-      currentDate < untilDate &&
-      !attemptsExhausted &&
-      availableDate < currentDate
-    );
-  };
-
-  const handleQuizClick = (quiz: any) => {
-    if (currentUser?.role === "STUDENT") {
-      if (canTakeQuiz(quiz)) {
-        navigate(`#/Kanbas/Courses/${cid}/Quizzes/Attempt/${quiz._id}`);
-      } else {
-        alert(
-          "You cannot take this quiz. Either the deadline has passed or you've exhausted your attempts."
-        );
-      }
-    } else {
-      navigate(`#/Kanbas/Courses/${cid}/Quizzes/Info/${quiz._id}`);
-    }
-  };
-
   return (
     <div>
       <QuizControls />
@@ -159,7 +127,6 @@ export default function Quizzes() {
             <div className='flex-grow-1'>
               <a
                 href={`#/Kanbas/Courses/${cid}/Quizzes/Info/${quiz._id}`}
-                // onClick={() => handleQuizClick(quiz)}
                 style={{ color: "black" }}
               >
                 <strong>{quiz.title}</strong>
@@ -176,9 +143,7 @@ export default function Quizzes() {
             {currentUser && currentUser?.role === "FACULTY" && (
               <QuizControlRightButtons
                 quizId={quiz._id}
-                deleteQuiz={(quizId) => {
-                  removeQuiz(quizId);
-                }}
+                deleteQuiz={async (quizId) => removeQuiz(quizId)}
                 isPublished={quiz.isPublished}
                 negatePublishStatus={(quizId) => {
                   changePublishStatus(quizId);

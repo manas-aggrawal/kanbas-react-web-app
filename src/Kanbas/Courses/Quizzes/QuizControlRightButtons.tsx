@@ -1,11 +1,8 @@
 import { IoEllipsisVertical } from "react-icons/io5";
-import { FaTrash } from "react-icons/fa";
 import GreenCheckmark from "../Modules/GreenCheckmark";
 import { FcCancel } from "react-icons/fc";
-import { useSelector } from "react-redux";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useParams } from "react-router-dom";
 
 export default function QuizControlRightButtons({
   quizId,
@@ -19,7 +16,6 @@ export default function QuizControlRightButtons({
   negatePublishStatus: (quizId: string) => void;
 }) {
   const navigate = useNavigate();
-  const { cid } = useParams();
 
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const toggleDropdown = () => {
