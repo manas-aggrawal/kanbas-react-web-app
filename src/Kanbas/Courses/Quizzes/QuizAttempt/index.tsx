@@ -94,7 +94,7 @@ export default function QuizAttempt() {
       course: cid,
       user: currentUser._id,
       responses: response,
-      submittedAt: new Date().toISOString().slice(0, 16),
+      submittedAt: new Date().toISOString()?.slice(0, 16),
     };
     await quizClient.submitQuizResponse(quizSubmission);
     navigate(`/Kanbas/Courses/${cid}/Quizzes/Info/${qid}`);

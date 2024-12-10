@@ -56,7 +56,7 @@ export default function Quizzes() {
     const currentDate = new Date();
     if (currentDate < availableDate) {
       return (
-        "Not Available Until " + dates.available.slice(0, 16).split("T")[0]
+        "Not Available Until " + dates.available?.slice(0, 16).split("T")[0]
       );
     } else if (currentDate > availableDate && currentDate < untilDate) {
       return "Available";

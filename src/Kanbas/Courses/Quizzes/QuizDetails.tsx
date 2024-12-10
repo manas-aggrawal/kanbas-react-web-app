@@ -315,17 +315,17 @@ export default function QuizDetails() {
             <tbody>
               <tr>
                 <td className='text-center align-middle'>
-                  {quiz?.dates.due.slice(0, 16).split("T")[0]} at{" "}
-                  {quiz?.dates.due.slice(0, 16).split("T")[1]}
+                  {quiz?.dates.due?.slice(0, 16).split("T")[0]} at{" "}
+                  {quiz?.dates.due?.slice(0, 16).split("T")[1]}
                 </td>
                 <td className='text-center align-middle'>Everyone</td>
                 <td className='text-center align-middle'>
-                  {quiz?.dates.available.slice(0, 16).split("T")[0]} at{" "}
-                  {quiz?.dates.available.slice(0, 16).split("T")[1]}
+                  {quiz?.dates.available?.slice(0, 16).split("T")[0]} at{" "}
+                  {quiz?.dates.available?.slice(0, 16).split("T")[1]}
                 </td>
                 <td className='text-center align-middle'>
-                  {quiz?.dates.until.slice(0, 16).split("T")[0]} at{" "}
-                  {quiz?.dates.until.slice(0, 16).split("T")[1]}
+                  {quiz?.dates.until?.slice(0, 16).split("T")[0]} at{" "}
+                  {quiz?.dates.until?.slice(0, 16).split("T")[1]}
                 </td>
               </tr>
             </tbody>
