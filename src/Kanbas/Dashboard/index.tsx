@@ -35,6 +35,7 @@ export default function Dashboard({
   updateEnrollment: (courseId: string, enrolled: boolean) => void;
 }) {
   const { currentUser } = useSelector((state: any) => state.accountReducer);
+
   const navigate = useNavigate();
   const [course, setCourse] = useState({
     name: "",
@@ -132,7 +133,7 @@ export default function Dashboard({
           </h5>
           <div className='mb-2'>
             <input
-              value={course.name}
+              value={course?.name}
               className='form-control mb-3'
               placeholder='Course Name'
               onChange={(e) => setCourse({ ...course, name: e.target.value })}
@@ -140,7 +141,7 @@ export default function Dashboard({
           </div>
           <div className='mb-3'>
             <textarea
-              value={course.description}
+              value={course?.description}
               className='form-control'
               placeholder='Course Description'
               onChange={(e) =>
@@ -176,15 +177,15 @@ export default function Dashboard({
               courses.map((course: any) => (
                 <div
                   className='wd-dashboard-course col'
-                  key={course._id}
+                  key={course?._id}
                   style={{ width: "300px" }}
                 >
                   <div className='card rounded-3 overflow-hidden'>
                     <img
                       alt=''
                       src={
-                        course.image
-                          ? require(`../../../public/images/${course.image}`)
+                        course?.image
+                          ? require(`../../../public/images/${course?.image}`)
                           : "https://miro.medium.com/v2/1*K0a7xINk0RM5gfXGSN68cw.png"
                       }
                       width='100%'
@@ -192,37 +193,37 @@ export default function Dashboard({
                     />
                     <div className='card-body'>
                       <h5 className='wd-dashboard-course-title card-title'>
-                        {enrolling && (
+                        {/* {enrolling && (
                           <button
                             className={`btn ${
-                              course.enrolled ? "btn-danger" : "btn-success"
+                              course?.enrolled ? "btn-danger" : "btn-success"
                             } float-end`}
                           >
-                            {course.enrolled ? "Unenroll" : "Enroll"}
+                            {course?.enrolled ? "Unenroll" : "Enroll"}
                           </button>
-                        )}
-                        {course.name}
+                        )} */}
+                        {course?.name}
                       </h5>
                       <p
                         className='wd-dashboard-course-title card-text overflow-y-hidden'
                         style={{ maxHeight: 100 }}
                       >
-                        {course.description}
+                        {course?.description}
                       </p>
                       {/* Check if the user is enrolled in the course */}
                       {enrollments.find(
-                        (enrollment: any) => enrollment._id === course._id
+                        (enrollment: any) => enrollment?._id === course?._id
                       ) ? (
                         <button
                           className='btn btn-danger'
-                          onClick={() => handleUnenroll(course._id)}
+                          onClick={() => handleUnenroll(course?._id)}
                         >
                           Unenroll
                         </button>
                       ) : (
                         <button
                           className='btn btn-success'
-                          onClick={() => handleEnroll(course._id)}
+                          onClick={() => handleEnroll(course?._id)}
                         >
                           Enroll
                         </button>
@@ -236,15 +237,15 @@ export default function Dashboard({
               enrollments.map((course: any) => (
                 <div
                   className='wd-dashboard-course col'
-                  key={course._id}
+                  key={course?._id}
                   style={{ width: "300px" }}
                 >
                   <div className='card rounded-3 overflow-hidden'>
                     <img
                       alt=''
                       src={
-                        course.image
-                          ? require(`../../../public/images/${course.image}`)
+                        course?.image
+                          ? require(`../../../public/images/${course?.image}`)
                           : "https://miro.medium.com/v2/1*K0a7xINk0RM5gfXGSN68cw.png"
                       }
                       width='100%'
@@ -252,16 +253,16 @@ export default function Dashboard({
                     />
                     <div className='card-body'>
                       <h5 className='wd-dashboard-course-title card-title'>
-                        {course.name}
+                        {course?.name}
                       </h5>
                       <p
                         className='wd-dashboard-course-title card-text overflow-y-hidden'
                         style={{ maxHeight: 100 }}
                       >
-                        {course.description}
+                        {course?.description}
                       </p>
                       <Link
-                        to={`/Kanbas/Courses/${course._id}/Home`}
+                        to={`/Kanbas/Courses/${course?._id}/Home`}
                         className='btn btn-primary'
                       >
                         Go
@@ -270,7 +271,7 @@ export default function Dashboard({
                         <button
                           onClick={(event) => {
                             event.preventDefault();
-                            deleteCourse(course._id);
+                            deleteCourse(course?._id);
                             navigate(0);
                           }}
                           className='btn btn-danger float-end'
