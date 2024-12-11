@@ -31,7 +31,7 @@ export default function Assignments() {
 
   useEffect(() => {
     fetchAllAssignments();
-  }, [cid, dispatch]);
+  }, [cid, dispatch, assignments]);
 
   const removeAssignment = async (assignmentId: string) => {
     try {

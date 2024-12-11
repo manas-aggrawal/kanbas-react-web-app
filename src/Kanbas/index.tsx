@@ -33,14 +33,16 @@ const Kanbas = () => {
     } else {
       await userClient.unenrollFromCourse(currentUser._id, courseId);
     }
-    setCourses(
-      courses.map((course) => {
-        if (course._id === courseId) {
-          return { ...course, enrolled: enrolled };
-        } else {
-          return course;
-        }
-      })
+    dispatch(
+      setCourses(
+        courses.map((course) => {
+          if (course._id === courseId) {
+            return { ...course, enrolled: enrolled };
+          } else {
+            return course;
+          }
+        })
+      )
     );
   };
 
@@ -73,7 +75,7 @@ const Kanbas = () => {
     } else {
       findCoursesForUser();
     }
-  }, [currentUser, enrolling]);
+  }, [currentUser, enrolling, courses, enrollments]);
 
   const addNewCourse = async (course: {
     name: string;
