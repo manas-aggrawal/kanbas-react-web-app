@@ -33,7 +33,7 @@ export default function Quizzes() {
 
   useEffect(() => {
     fetchQuizzes();
-  }, [dispatch]);
+  }, [dispatch, quizzes]);
 
   const removeQuiz = async (quizId: string) => {
     await quizClient.deleteQuiz(quizId);

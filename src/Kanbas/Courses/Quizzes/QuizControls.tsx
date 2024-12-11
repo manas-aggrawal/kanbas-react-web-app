@@ -16,6 +16,7 @@ export default function QuizControls() {
   }
   const handleAddQuiz = () => {
     const newId = generateUniqueId();
+    console.log("🚀 ~ handleAddQuiz ~ newId:", newId);
     navigate(`/Kanbas/Courses/${cid}/Quizzes/Edit/${newId}`);
   };
 

@@ -50,11 +50,13 @@ export default function QuizzesEditor() {
     if (qid) {
       try {
         const Quiz = await quizClient.getQuizById(qid);
-        setQuiz(Quiz);
-        setDetails(mapQuizToDetails(Quiz));
-        setQuestions(Quiz.questions || []);
-        setDetailsUpdated(true);
-        setQuestionsUpdated(true);
+        if (Quiz) {
+          setQuiz(Quiz);
+          setDetails(mapQuizToDetails(Quiz));
+          setQuestions(Quiz.questions || []);
+          setDetailsUpdated(true);
+          setQuestionsUpdated(true);
+        }
       } catch (error) {
         console.error("Error fetching quiz:", error);
       }
@@ -78,6 +80,7 @@ export default function QuizzesEditor() {
     try {
       const quizData = {
         ...details,
+        _id: qid,
         questions,
         isPublished: false, // Default state
       };
