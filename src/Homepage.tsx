@@ -6,6 +6,9 @@ export default function HomePage() {
       <h1 id='wd-name' className='mb-4 fw-bold'>
         Manas Aggrawal Section 3
       </h1>
+      <h1 id='wd-name' className='mb-4 fw-bold'>
+        Rachana Sudhakar Section 2
+      </h1>
       <nav className='navbar navbar-expand-lg navbar-light bg-dark rounded-1'>
         <div className='container-fluid'>
           <button
@@ -42,7 +45,7 @@ export default function HomePage() {
                   to='https://github.com/manas-aggrawal/kanbas-react-web-app'
                   className='nav-link bg-danger text-white align-items-center me-2 rounded-1'
                 >
-                  Manas Aggrawal Kanbas Github Repo
+                  Team PowerRangers Kanbas-quiz project Github Repo
                 </Link>
               </li>
             </ul>

@@ -2,14 +2,14 @@ import { IoEllipsisVertical } from "react-icons/io5";
 import { FaCheckCircle, FaTrash } from "react-icons/fa";
 import { useSelector } from "react-redux";
 export default function AssignmentControlButtons({
-  assignementId,
+  assignmentId,
   deleteAssignment,
 }: {
-  assignementId: string;
+  assignmentId: string;
   deleteAssignment: (assignementId: string) => void;
 }) {
   const { currentUser } = useSelector((state: any) => state.accountReducer);
-  // console.log("Current User: ", currentUser.role);
+
   const userRole = currentUser.role;
   return (
     <span>
@@ -18,12 +18,12 @@ export default function AssignmentControlButtons({
           style={{ cursor: "pointer" }}
           className='text-success me-2 fs-5'
         />
-        {userRole === "FACULTY" && (
+        {(userRole === "FACULTY" || userRole === "ADMIN") && (
           <FaTrash
             style={{ cursor: "pointer" }}
             className='text-danger me-2 fs-5'
             onClick={(e) => {
-              deleteAssignment(assignementId);
+              deleteAssignment(assignmentId);
             }}
           />
         )}
